@@ -1,7 +1,7 @@
 /*
  * File:   LAB2.c
- * Author: crade
- *
+ * Author: Dario Marroquin
+ * Carne:  18269
  * Created on 29 de enero de 2021, 8:49
  */
 
