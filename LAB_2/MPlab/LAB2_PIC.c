@@ -46,10 +46,27 @@
 //Funciones
 //--------------------------------------------
 void Setup (void);
-void Semaforo (void);
-int Carrera (unsigned int Race);
-int  Winner = 0;
+void __interrupt() inter void(); //Interrupciones
 
+
+//----------------------------------------------------------------------------
+//Listas
+//----------------------------------------------------------------------------
+
+char contador = 0;
+
+
+//-----------------------------------------------------------------------------
+//CONFIG puertos
+//--------------------------------------------
+void Setup(void){
+    
+    //Leds
+    TRISD = 0;
+    PORTD = 0;
+    
+    //Botones
+}
 void main(void) {
     return;
 }
