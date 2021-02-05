@@ -33,6 +33,13 @@
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 
+//-----------------------------------------------------------------------------
+//Creacion Variables
+//--------------------------------------------
+
+#define T1 PORTEbits.RE0                //Transistor Display 1
+#define T2  PORTEbits.RE1              //Transistor display 2
+#define _XTAL_FREQ 8000000            //8 MHZ
 
 void main(void) {
     return;
