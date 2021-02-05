@@ -1,6 +1,6 @@
 //Header Interrupciones B
-#ifndef int_B
-#define int_B
+#ifndef int_b_H
+#define int_b_H
 
 //Libreria
 #include <xc.h>

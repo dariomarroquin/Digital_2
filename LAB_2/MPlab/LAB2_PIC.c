@@ -67,6 +67,7 @@ char contador = 0;
 //--------------------------------------------
 void Setup(void){
     
+    ANSELH = 0b00000000;
     //Leds
     TRISD = 0;
     PORTD = 0;
@@ -79,7 +80,7 @@ void Setup(void){
 }
 
 void __interrupt() ISR(void){
-       if (INTCONbits.RBIF == 1){
+       if (INTCONbits.RBIF == 1 && INTCONbits.RBIE == 1){
            if (PORTBbits.RB0 == 1){
                contador++;
            }
