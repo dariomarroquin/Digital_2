@@ -8,7 +8,7 @@
 //Libreria
 #include <stdint.h> 
 #include <pic16f887.h>
-#incolude "INTERRB.h"
+#include "INTERRB.h"
 
 
 //Funcion de header
