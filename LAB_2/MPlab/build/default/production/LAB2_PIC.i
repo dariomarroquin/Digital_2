@@ -2987,6 +2987,14 @@ void main(void) {
         config_ADC(f);
         mtplx1 = tabla[menadc];
         mtplx2 = tabla[masadc];
+
+
+        if (vadc > contador){
+            PORTCbits.RC7 = 1;
+        }
+        else {
+            PORTCbits.RC7 = 0;
+        }
     }
 
 
