@@ -17,6 +17,8 @@
 #include <stdint.h>
 #include <pic16f887.h>
 #include "INTERRB.h"
+#include "ADC.h"
+#include "MTPLX.h"
 
 
 // PIC16F887 Configuration Bit Settings
@@ -60,7 +62,7 @@ void __interrupt() ISR(void); //Interrupciones
 //----------------------------------------------------------------------------
 
 char contador = 0;
-char vadce;
+char vadc;
 char masadc;
 char menadc;
 char mtplx1;
@@ -71,7 +73,7 @@ char f = 1;
 //----------------------------------------------------------------------------
 //Tabla 7 segmentos
 //----------------------------------------------------------------------------
-char tabla [16] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110b, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111, 0b01110111, 0b01111100, 0b00111001, 0b01011110, 0b01111001, 0b01110001};
+char tabla [16] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111, 0b01110111, 0b01111100, 0b00111001, 0b01011110, 0b01111001, 0b01110001};
 
 
 //-----------------------------------------------------------------------------
@@ -133,7 +135,7 @@ void __interrupt() ISR(void){
            asm("MOVF _menadc, W");
            asm("ANDLW 0b00001111");
            asm("MOVWF    _menadc");
-           `PIR1bits.ADIF = 0;
+           PIR1bits.ADIF = 0;
        }
        
        if(INTCONbits.T0IF == 1){
@@ -158,6 +160,7 @@ void __interrupt() ISR(void){
 void main(void) {
     Setup();
     config_INTB();
+    Timer0();
     
     while (1){
         PORTD = contador;

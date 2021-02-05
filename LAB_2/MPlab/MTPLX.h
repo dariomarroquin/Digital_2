@@ -6,6 +6,6 @@
 #include <stdint.h>
 
 //Funcion (Nombre)
-void timer0 (void);
+void Timer0 (void);
 
 #endif 

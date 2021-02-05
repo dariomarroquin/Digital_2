@@ -19,10 +19,10 @@
 void config_ADC(uint8_t f) {
     INTCON  = 0b11101000; //Activa interrupciones y timer
     PIR1bits.ADIF   = 0;   //Activa 1 al terminar conversion
-    PIR1bits.ADIE   = 1;   //Interrupcion Activada
+    PIE1bits.ADIE   = 1;   //Interrupcion Activada
     ADCON1bits.ADFM = 0;   //Bits izquierda mas significativos
-    IF (f == 1){
-        __delay(10);
+    if (f == 1){
+        __delay_us(10);
         f = 0;
         ADCON0bits.GO = 1;
     }

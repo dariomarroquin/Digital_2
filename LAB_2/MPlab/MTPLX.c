@@ -16,7 +16,7 @@
 
 //Funcion de header
 
-void timer0 (void) {
+void Timer0 (void) {
     OPTION_REG  = 0x84;
     TMR0        = 100;
     INTCON      = 0b11101000;
