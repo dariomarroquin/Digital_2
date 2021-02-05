@@ -2647,7 +2647,7 @@ void config_INTB (void);
 
 
 
-void confi_INTB(void) {
+void config_INTB(void) {
     INTCON = 0b11101000;
     IOCB = 0b00000011;
 }
