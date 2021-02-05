@@ -65,7 +65,7 @@ char masadc;
 char menadc;
 char mtplx1;
 char mtplx2;
-char flag = 1;
+char f = 1;
 
 
 //----------------------------------------------------------------------------
@@ -118,7 +118,38 @@ void __interrupt() ISR(void){
                contador--;
            }    
        } 
-       INTCONbits.RBIF = 0;  
+       INTCONbits.RBIF = 0; 
+       
+       if (PIR1bits.ADIF == 1){
+           f=1;
+  
+           //Insteramos Assembler
+           asm("MOVF  ADRESH,W");
+           asm("MOVWF _vadc");
+           asm("MOVWF  _menadc");
+           asm("SWAPF ADRESH,W");
+           asm("ANDLW 0b00001111");
+           asm("MOVWF _masadc");
+           asm("MOVF _menadc, W");
+           asm("ANDLW 0b00001111");
+           asm("MOVWF    _menadc");
+           `PIR1bits.ADIF = 0;
+       }
+       
+       IF(INTCONbits.T0IF == 1){
+           TMR0= 100;
+           if(T1 == 1){
+               T1= 0;
+               T2 = 1;
+               PORTC = mtplx2;
+           }
+           else{
+               T1 = 1;
+               T2 = 0;
+               PORTC = mtplx1;
+           }
+          INTCONbits.T0IF = 0; 
+       }
     }
 
 
