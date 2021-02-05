@@ -41,6 +41,15 @@
 #define T2  PORTEbits.RE1              //Transistor display 2
 #define _XTAL_FREQ 8000000            //8 MHZ
 
+
+//-----------------------------------------------------------------------------
+//Funciones
+//--------------------------------------------
+void Setup (void);
+void Semaforo (void);
+int Carrera (unsigned int Race);
+int  Winner = 0;
+
 void main(void) {
     return;
 }
