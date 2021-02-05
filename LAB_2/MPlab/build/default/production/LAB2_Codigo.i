@@ -1,4 +1,4 @@
-# 1 "LAB2.c"
+# 1 "LAB2_Codigo.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "LAB2.c" 2
-# 11 "LAB2.c"
+# 1 "LAB2_Codigo.c" 2
+# 14 "LAB2_Codigo.c"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2488,30 +2488,28 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 11 "LAB2.c" 2
+# 14 "LAB2_Codigo.c" 2
 
 
 
 
-#pragma config FOSC = EXTRC_CLKOUT
-#pragma config WDTE = ON
+
+
+
+#pragma config FOSC = XT
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
-#pragma config MCLRE = ON
+#pragma config MCLRE = OFF
 #pragma config CP = OFF
 #pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config IESO = ON
-#pragma config FCMEN = ON
-#pragma config LVP = ON
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
 
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-
-
-
-
-
 
 
 void main(void) {
