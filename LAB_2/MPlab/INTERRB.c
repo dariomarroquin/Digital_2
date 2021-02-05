@@ -15,5 +15,5 @@
 
 void confi_INTB(void) {
     INTCON  = 0b11101000; //Activa interrupciones y timer
-    IOCBbits = 0B00000011;
+    IOCB = 0B00000011;
 }
