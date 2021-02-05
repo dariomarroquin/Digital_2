@@ -12,6 +12,12 @@
 
 
 #include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <pic16f887.h>
+#include "INTERRB.h"
+
 
 // PIC16F887 Configuration Bit Settings
 
@@ -46,7 +52,7 @@
 //Funciones
 //--------------------------------------------
 void Setup (void);
-void __interrupt() inter void(); //Interrupciones
+void __interrupt() ISR(void); //Interrupciones
 
 
 //----------------------------------------------------------------------------
@@ -66,7 +72,35 @@ void Setup(void){
     PORTD = 0;
     
     //Botones
+    TRISB = 0b00000011;
+    PORTB = 0;
+    
+    
 }
+
+void __interrupt() ISR(void){
+       if (INTCONbits.RBIF == 1){
+           if (PORTBbits.RB0 == 1){
+               contador++;
+           }
+           
+           if (PORTBbits.RB1 == 1){
+               contador--;
+           }    
+       } 
+       INTCONbits.RBIF = 0;  
+    }
+
+
+
+
 void main(void) {
-    return;
+    Setup();
+    config_INTB();
+    
+    while (1){
+        PORTD = contador;
+    }
+    
+   
 }
