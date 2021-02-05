@@ -89,6 +89,23 @@ void Setup(void){
     PORTB = 0;
     
     
+    //ADC
+    ADCON0 = 0b01010101;
+    
+    //Pot
+    ANSEL = 0b00000000;
+    TRISA = 0b00000001;
+    
+    //7 SEG
+    TRISC = 0;
+    PORTC = 0;
+    
+    //TRANSISTORES
+    TRISE = 0;
+    PORTE = 0;
+    
+    
+    
 }
 
 void __interrupt() ISR(void){
