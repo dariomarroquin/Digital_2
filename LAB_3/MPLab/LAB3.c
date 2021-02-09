@@ -97,10 +97,9 @@ float conversion(uint8_t d){
 void __interrupt() ISR(void){
     if (RCIF == 1){
         RCIF = 0;
-        LecturaUSART= Read_USART();
-        if (LecturaUSART == '+'){contador++;}
-        else if (LecturaUSART== '-'){contador--;}
-        
+        RUSART= Read_USART();
+        if (RUSART == '+'){contador++;}
+        else if (RUSART== '-'){contador--;}    
     };
 }
 
