@@ -82,7 +82,26 @@ void Setup(void){
     PIR1bits.RCIF   = 0;
     INTCONbits.GIE  = 1;
     
-    
+}
+
+//-----------------------------------------------------------------------------
+//Conversion
+//-----------------------------------------------------------------------------
+float conversion(uint8_t d){
+    return d*0.0196;
+}
+
+//-----------------------------------------------------------------------------
+//Interrupcion
+//-----------------------------------------------------------------------------
+void __interrupt() ISR(void){
+    if (RCIF == 1){
+        RCIF = 0;
+        LecturaUSART= Read_USART();
+        if (LecturaUSART == '+'){contador++;}
+        else if (LecturaUSART== '-'){contador--;}
+        
+    };
 }
 
 
