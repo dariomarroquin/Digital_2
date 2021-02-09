@@ -56,7 +56,7 @@ char data[20];
 //--------------------------------------------
 void Setup (void);
 float conversion(uint8_t b);
-void __interrupt() ISR(void);
+void __interrupt() ISR();
 
 //-----------------------------------------------------------------------------
 //CONFIG puertos
@@ -94,7 +94,7 @@ float conversion(uint8_t b){
 //-----------------------------------------------------------------------------
 //Interrupcion
 //-----------------------------------------------------------------------------
-void __interrupt() ISR(void){
+void __interrupt() ISR(){
     if (RCIF == 1){
         RCIF = 0;
         RUSART= Read_USART();

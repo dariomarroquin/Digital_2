@@ -2821,7 +2821,7 @@ char data[20];
 
 void Setup (void);
 float conversion(uint8_t b);
-void __attribute__((picinterrupt(("")))) ISR(void);
+void __attribute__((picinterrupt(("")))) ISR();
 
 
 
@@ -2859,7 +2859,7 @@ float conversion(uint8_t b){
 
 
 
-void __attribute__((picinterrupt(("")))) ISR(void){
+void __attribute__((picinterrupt(("")))) ISR(){
     if (RCIF == 1){
         RCIF = 0;
         RUSART= Read_USART();
