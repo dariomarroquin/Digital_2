@@ -1,3 +1,13 @@
+_RB0 30 0 ABS 0
+_RB1 31 0 ABS 0
+_RE0 48 0 ABS 0
+_RB2 32 0 ABS 0
+_RE1 49 0 ABS 0
+_RB3 33 0 ABS 0
+_RB4 34 0 ABS 0
+_RB5 35 0 ABS 0
+_RB6 36 0 ABS 0
+_RB7 37 0 ABS 0
 __S0 800 0 ABS 0
 __S1 0 0 ABS 0
 __S2 0 0 ABS 0
@@ -14,11 +24,13 @@ __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
+_ADCON1 9F 0 ABS 0
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 3
 __Leeprom_data 0 0 EEDATA 3
 ___int_sp 0 0 STACK 2
+_ADRESH 1E 0 ABS 0
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 __Hsfr0 0 0 ABS 0
@@ -39,6 +51,10 @@ __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 end_of_initialization 7FC 0 CODE 0
 ___stacklo 0 0 ABS 0
+_TRISAbits 85 0 ABS 0
+_TRISBbits 86 0 ABS 0
+_TRISEbits 89 0 ABS 0
+_ANSELbits 188 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
 __Hbank0 0 0 ABS 0
@@ -68,6 +84,8 @@ __Lcinit 7FC 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
+_ADCON0bits 1F 0 ABS 0
+_ANSELHbits 189 0 ABS 0
 __Hend_init 3 0 CODE 0
 __Lend_init 0 0 CODE 0
 __Hreset_vec 0 0 CODE 0
@@ -92,12 +110,12 @@ cinit FF8 FFF CODE FF8 0
 maintext FF2 FF7 CODE FF2 0
 %locals
 dist/default/production\MPLab.production.o
-C:\Users\crade\AppData\Local\Temp\sla0.s
-411 7FC 0 CODE 0
-414 7FC 0 CODE 0
-420 7FC 0 CODE 0
-422 7FC 0 CODE 0
-423 7FD 0 CODE 0
+C:\Users\crade\AppData\Local\Temp\sqrs.s
+759 7FC 0 CODE 0
+762 7FC 0 CODE 0
+768 7FC 0 CODE 0
+770 7FC 0 CODE 0
+771 7FD 0 CODE 0
 LAB3.c
 10 7F9 0 CODE 0
 11 7F9 0 CODE 0

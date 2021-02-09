@@ -9,7 +9,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include "ADC.h"
-#define __XTAL_FREQ 8000000
+#define _XTAL_FREQ 8000000
 
 
 void config_ADC () {
