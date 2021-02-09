@@ -5,5 +5,5 @@
 #include <stidnt.h>
 
 void config_ADC();
-uint8_ ValorADC(uint9_t x);
+uint8_t ValorADC(uint9_t x);
 #endif
