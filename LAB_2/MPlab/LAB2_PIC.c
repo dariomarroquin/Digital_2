@@ -95,7 +95,7 @@ void Setup(void){
     ADCON0 = 0b01010101;
     
     //Pot
-    ANSEL = 0b00000000;
+    ANSEL = 0b00000001;
     TRISA = 0b00000001;
     
     //7 SEG
@@ -126,19 +126,19 @@ void __interrupt() ISR(void){
            f=1;
   
            //Insteramos Assembler
-           asm("MOVF  ADRESH,W");
-           asm("MOVWF _vadc");
-           asm("MOVWF  _menadc");
-           asm("SWAPF ADRESH,W");
-           asm("ANDLW 0b00001111");
-           asm("MOVWF _masadc");
-           asm("MOVF _menadc, W");
-           asm("ANDLW 0b00001111");
-           asm("MOVWF    _menadc");
+           asm("MOVF  ADRESH,W"); //ADC  a W
+           asm("MOVWF _vadc");    //Meto valor W a mi variable del adc
+           asm("MOVWF  _menadc"); // Muevo 4 bits menos significativo
+           asm("SWAPF ADRESH,W"); // Muevo ADC a w
+           asm("ANDLW 0b00001111"); //Con and rellenar bit
+           asm("MOVWF _masadc");    //Muevo bits mas significativos
+           asm("MOVF _menadc, W");  //Muevo ADC a W
+           asm("ANDLW 0b00001111"); //Se rellenan bits
+           asm("MOVWF    _menadc"); //Muevo adc menos significativos a 2do display
            PIR1bits.ADIF = 0;
        }
        
-       if(INTCONbits.T0IF == 1){
+       if(INTCONbits.T0IF == 1){   //Interrupcion Timer0
            TMR0= 100;
            if(T1 == 1){
                T1= 0;

@@ -442,8 +442,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB2_PIC.c: 95:     ADCON0 = 0b01010101;
 [e = _ADCON0 -> -> 85 `i `uc ]
 "98
-[; ;LAB2_PIC.c: 98:     ANSEL = 0b00000000;
-[e = _ANSEL -> -> 0 `i `uc ]
+[; ;LAB2_PIC.c: 98:     ANSEL = 0b00000001;
+[e = _ANSEL -> -> 1 `i `uc ]
 "99
 [; ;LAB2_PIC.c: 99:     TRISA = 0b00000001;
 [e = _TRISA -> -> 1 `i `uc ]

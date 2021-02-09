@@ -2915,7 +2915,7 @@ void Setup(void){
     ADCON0 = 0b01010101;
 
 
-    ANSEL = 0b00000000;
+    ANSEL = 0b00000001;
     TRISA = 0b00000001;
 
 
