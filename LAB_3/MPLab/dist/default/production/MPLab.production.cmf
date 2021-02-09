@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\crade\AppData\Local\Temp\sqrs.o
+$C:\Users\crade\AppData\Local\Temp\shqs.o
 end_init CODE 0 0 0 3 2
 $dist/default/production\MPLab.production.o
 cinit CODE 0 7FC 7FC 4 2
@@ -63,11 +63,11 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MPLab.production.o
-7FC cinit CODE >759:C:\Users\crade\AppData\Local\Temp\sqrs.s
-7FC cinit CODE >762:C:\Users\crade\AppData\Local\Temp\sqrs.s
-7FC cinit CODE >768:C:\Users\crade\AppData\Local\Temp\sqrs.s
-7FC cinit CODE >770:C:\Users\crade\AppData\Local\Temp\sqrs.s
-7FD cinit CODE >771:C:\Users\crade\AppData\Local\Temp\sqrs.s
+7FC cinit CODE >939:C:\Users\crade\AppData\Local\Temp\shqs.s
+7FC cinit CODE >942:C:\Users\crade\AppData\Local\Temp\shqs.s
+7FC cinit CODE >948:C:\Users\crade\AppData\Local\Temp\shqs.s
+7FC cinit CODE >950:C:\Users\crade\AppData\Local\Temp\shqs.s
+7FD cinit CODE >951:C:\Users\crade\AppData\Local\Temp\shqs.s
 7F9 maintext CODE >10:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\LAB_3\MPLab\LAB3.c
 7F9 maintext CODE >11:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\LAB_3\MPLab\LAB3.c
 7F9 maintext CODE >12:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\LAB_3\MPLab\LAB3.c
@@ -90,31 +90,40 @@ __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\sqrs.o
+_BRGH 4C2 0 ABS 0 - dist/default/production\MPLab.production.o
+_CREN C4 0 ABS 0 - dist/default/production\MPLab.production.o
+_RCIF 65 0 ABS 0 - dist/default/production\MPLab.production.o
+_SPEN C7 0 ABS 0 - dist/default/production\MPLab.production.o
+_SYNC 4C4 0 ABS 0 - dist/default/production\MPLab.production.o
+_TRMT 4C1 0 ABS 0 - dist/default/production\MPLab.production.o
+_TXEN 4C5 0 ABS 0 - dist/default/production\MPLab.production.o
+___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\shqs.o
 _main FF2 0 CODE 0 maintext dist/default/production\MPLab.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MPLab.production.o
-start 0 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\sqrs.o
+start 0 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\shqs.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MPLab.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sqrs.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\shqs.o
 wtemp0 7E 0 ABS 0 - dist/default/production\MPLab.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADCON1 9F 0 ABS 0 - dist/default/production\MPLab.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\MPLab.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\sqrs.o
-___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\sqrs.o
+___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\shqs.o
+___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\shqs.o
 start_initialization FF8 0 CODE 0 cinit dist/default/production\MPLab.production.o
 _TRISAbits 85 0 ABS 0 - dist/default/production\MPLab.production.o
 _TRISBbits 86 0 ABS 0 - dist/default/production\MPLab.production.o
 _TRISEbits 89 0 ABS 0 - dist/default/production\MPLab.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\sqrs.o
+_TRISC6 43E 0 ABS 0 - dist/default/production\MPLab.production.o
+_TRISC7 43F 0 ABS 0 - dist/default/production\MPLab.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\shqs.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -161,7 +170,7 @@ __S1 0 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\sqrs.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\shqs.o
 __pmaintext FF2 0 CODE 0 maintext dist/default/production\MPLab.production.o
 __Lcommon 0 0 ABS 0 common -
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\MPLab.production.o
@@ -185,6 +194,9 @@ _ANSELbits 188 0 ABS 0 - dist/default/production\MPLab.production.o
 __pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/default/production\MPLab.production.o
 __Hend_init 6 0 CODE 0 end_init -
 __end_of_main FF8 0 CODE 0 maintext dist/default/production\MPLab.production.o
+_RCREG 1A 0 ABS 0 - dist/default/production\MPLab.production.o
+_SPBRG 99 0 ABS 0 - dist/default/production\MPLab.production.o
+_TXREG 19 0 ABS 0 - dist/default/production\MPLab.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __initialization FF8 0 CODE 0 cinit dist/default/production\MPLab.production.o

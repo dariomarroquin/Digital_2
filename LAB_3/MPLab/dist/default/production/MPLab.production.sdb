@@ -3,6 +3,8 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
@@ -19,7 +21,13 @@
 [v _PUERTO PUERTO `(v  1 e 1 0 ]
 "37
 [v _comandosLCD comandosLCD `(v  1 e 1 0 ]
-"1238 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"30 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\LAB_3\MPLab\USART.c
+[v _Write_USART Write_USART `(v  1 e 1 0 ]
+"1133 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 [s S27 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
@@ -76,6 +84,8 @@
 "1677
 [u S121 . 1 `S116 1 . 1 0 ]
 [v _TRISEbits TRISEbits `VES121  1 e 1 @137 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 [s S95 . 1 `uc 1 ANS0 1 0 :1:0 
@@ -100,6 +110,10 @@
 "3464
 [u S157 . 1 `S150 1 . 1 0 ]
 [v _ANSELHbits ANSELHbits `VES157  1 e 1 @393 ]
+"3695
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"3836
+[v _CREN CREN `VEb  1 e 0 @196 ]
 "4103
 [v _RB0 RB0 `VEb  1 e 0 @48 ]
 "4106
@@ -116,10 +130,24 @@
 [v _RB6 RB6 `VEb  1 e 0 @54 ]
 "4124
 [v _RB7 RB7 `VEb  1 e 0 @55 ]
+"4175
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
 "4205
 [v _RE0 RE0 `VEb  1 e 0 @72 ]
 "4208
 [v _RE1 RE1 `VEb  1 e 0 @73 ]
+"4259
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"4313
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"4466
+[v _TRISC6 TRISC6 `VEb  1 e 0 @1086 ]
+"4469
+[v _TRISC7 TRISC7 `VEb  1 e 0 @1087 ]
+"4508
+[v _TRMT TRMT `VEb  1 e 0 @1217 ]
+"4538
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
 "10 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\LAB_3\MPLab\LAB3.c
 [v _main main `(v  1 e 1 0 ]
 {
