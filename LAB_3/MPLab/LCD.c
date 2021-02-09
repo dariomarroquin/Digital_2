@@ -20,7 +20,6 @@ void char_LCD(char caracter) {
     EN = 0;
     __delay_us(5);
     __delay_us(50);
-    return;
 }
 
 void PUERTO(uint8_t x){

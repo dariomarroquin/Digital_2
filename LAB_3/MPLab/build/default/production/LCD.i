@@ -2658,7 +2658,6 @@ void char_LCD(char caracter) {
     RE1 = 0;
     _delay((unsigned long)((5)*(8000000/4000000.0)));
     _delay((unsigned long)((50)*(8000000/4000000.0)));
-    return;
 }
 
 void PUERTO(uint8_t x){
