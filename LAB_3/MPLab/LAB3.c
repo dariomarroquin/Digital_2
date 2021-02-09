@@ -20,7 +20,7 @@
 // CONFIG2
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
-
+#define _XTAL_FREQ 8000000
 
 //-----------------------------------------------------------------------------
 //Librerias
@@ -55,7 +55,7 @@ char data[20];
 //Funciones
 //--------------------------------------------
 void Setup (void);
-float conversion(uint8_t d);
+float conversion(uint8_t b);
 void __interrupt() ISR(void);
 
 //-----------------------------------------------------------------------------
@@ -87,8 +87,8 @@ void Setup(void){
 //-----------------------------------------------------------------------------
 //Conversion
 //-----------------------------------------------------------------------------
-float conversion(uint8_t d){
-    return d*0.0196;
+float conversion(uint8_t b){
+    return b*0.0196;
 }
 
 //-----------------------------------------------------------------------------
@@ -116,13 +116,13 @@ void main(void) {
       V1 = conversion(vADC1);
       V2 = conversion(vADC2);
       Write_USART_String("V1    V2   contador \n");
-      sprintf(data, "%2.1f   %2.1f  %d" V1, V2, contador);
+      sprintf(data, "%2.1f   %2.1f  %d", V1, V2, contador);
       Write_USART_String(data);
       Write_USART(13);
       Write_USART(10);
       LCD_Clear();
       LCD_Cursor(1,1);
-      LCD_Print("V1    V2    Cconta");
+      LCD_Print("V1    V2    Conta");
       LCD_Cursor(2,0);
       LCD_Print(data);
       __delay_ms(500);      

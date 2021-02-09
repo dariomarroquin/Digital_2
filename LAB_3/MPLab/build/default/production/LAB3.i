@@ -2802,8 +2802,8 @@ void Read_USART_String(char *Output, unsigned int length);
 
 
 uint8_t contador = 0;
-uint8_t valorADC1;
-uint8_t valorADC2;
+uint8_t vADC1;
+uint8_t vADC2;
 float V1= 0.0;
 float V2 = 0.0;
 
@@ -2820,7 +2820,7 @@ char data[20];
 
 
 void Setup (void);
-float conversion(uint8_t d);
+float conversion(uint8_t b);
 void __attribute__((picinterrupt(("")))) ISR(void);
 
 
@@ -2847,10 +2847,50 @@ void Setup(void){
     PIR1bits.RCIF = 0;
     INTCONbits.GIE = 1;
 
+}
 
+
+
+
+float conversion(uint8_t b){
+    return b*0.0196;
+}
+
+
+
+
+void __attribute__((picinterrupt(("")))) ISR(void){
+    if (RCIF == 1){
+        RCIF = 0;
+        RUSART= Read_USART();
+        if (RUSART == '+'){contador++;}
+        else if (RUSART== '-'){contador--;}
+    };
 }
 
 
 void main(void) {
-    return;
+    Setup();
+    config_ADC();
+    USART_Init(9600);
+    LCD_ON();
+    LCD_Clear();
+    while(1){
+      vADC1 = ValorADC(0);
+      vADC2 = ValorADC(1);
+      V1 = conversion(vADC1);
+      V2 = conversion(vADC2);
+      Write_USART_String("V1    V2   contador \n");
+      sprintf(data, "%2.1f   %2.1f  %d", V1, V2, contador);
+      Write_USART_String(data);
+      Write_USART(13);
+      Write_USART(10);
+      LCD_Clear();
+      LCD_Cursor(1,1);
+      LCD_Print("V1    V2    Conta");
+      LCD_Cursor(2,0);
+      LCD_Print(data);
+      _delay((unsigned long)((500)*(8000000/4000.0)));
+    }
+
 }
