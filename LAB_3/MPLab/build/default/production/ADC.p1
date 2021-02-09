@@ -331,8 +331,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC.c: 16:     ADCON0bits.ADCS = 1;
 [e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
 "17
-[; ;ADC.c: 17:     ADCON1 = 1;
-[e = _ADCON1 -> -> 1 `i `uc ]
+[; ;ADC.c: 17:     ADCON1 = 0;
+[e = _ADCON1 -> -> 0 `i `uc ]
 "18
 [; ;ADC.c: 18: }
 [e :UE 138 ]
@@ -485,14 +485,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;ADC.c: 41:     resultado:
 [e :U 157 ]
 "42
-[; ;ADC.c: 42:             if (ADCON0bits.GO_DONE ==1){goto resultado;}
+[; ;ADC.c: 42:     if (ADCON0bits.GO_DONE ==1){goto resultado;}
 [e $ ! == -> . . _ADCON0bits 3 1 `i -> 1 `i 158  ]
 {
 [e $U 157  ]
 }
 [e $U 159  ]
 "43
-[; ;ADC.c: 43:             else {ADCON0bits.ADON=0; return ADRESH;}
+[; ;ADC.c: 43:     else {ADCON0bits.ADON=0; return ADRESH;}
 [e :U 158 ]
 {
 [e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]

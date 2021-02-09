@@ -73,7 +73,7 @@ void LCD_Cursor (uint8_t x, uint8_t y){
         
 }
 
-void LCD_print (char *a){
+void LCD_Print (char *a){
     int i;
     for (i=0; a[i] != '\0'; i++)
         char_LCD(a[i]);

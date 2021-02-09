@@ -534,10 +534,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB3.c: 117:       V2 = conversion(vADC2);
 [e = _V2 ( _conversion (1 _vADC2 ]
 "118
-[; ;LAB3.c: 118:       Write_USART_String("V1    V2   contador \n");
+[; ;LAB3.c: 118:       Write_USART_String("V1   V2   contador \n");
 [e ( _Write_USART_String (1 :s 1C ]
 "119
-[; ;LAB3.c: 119:       sprintf(data, "%2.1f   %2.1f  %d", V1, V2, contador);
+[; ;LAB3.c: 119:       sprintf(data, "%2.1f   %2.1f   %d", V1, V2, contador);
 [e ( _sprintf (1 , , , (. , &U _data :s 2C -> _V1 `d -> _V2 `d -> _contador `i ]
 "120
 [; ;LAB3.c: 120:       Write_USART_String(data);
@@ -555,7 +555,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LAB3.c: 124:       LCD_Cursor(1,1);
 [e ( _LCD_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
 "125
-[; ;LAB3.c: 125:       LCD_Print("V1    V2    Conta");
+[; ;LAB3.c: 125:       LCD_Print("V1   V2   conta");
 [e ( _LCD_Print (1 :s 3C ]
 "126
 [; ;LAB3.c: 126:       LCD_Cursor(2,0);
@@ -572,11 +572,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 147 ]
 [e $U 148  ]
 [e :U 149 ]
+"130
+[; ;LAB3.c: 130:     return;
+[e $UE 146  ]
 "131
 [; ;LAB3.c: 131: }
 [e :UE 146 ]
 }
 [p f _sprintf 8495232 ]
-[a 2C 37 50 46 49 102 32 32 32 37 50 46 49 102 32 32 37 100 0 ]
-[a 3C 86 49 32 32 32 32 86 50 32 32 32 32 67 111 110 116 97 0 ]
-[a 1C 86 49 32 32 32 32 86 50 32 32 32 99 111 110 116 97 100 111 114 32 10 0 ]
+[a 2C 37 50 46 49 102 32 32 32 37 50 46 49 102 32 32 32 37 100 0 ]
+[a 3C 86 49 32 32 32 86 50 32 32 32 99 111 110 116 97 0 ]
+[a 1C 86 49 32 32 32 86 50 32 32 32 99 111 110 116 97 100 111 114 32 10 0 ]

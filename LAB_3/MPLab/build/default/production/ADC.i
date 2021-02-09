@@ -2650,7 +2650,7 @@ uint8_t ValorADC(uint8_t x);
 
 void config_ADC () {
     ADCON0bits.ADCS = 1;
-    ADCON1 = 1;
+    ADCON1 = 0;
 }
 
 uint8_t ValorADC (uint8_t x){
@@ -2675,7 +2675,7 @@ uint8_t ValorADC (uint8_t x){
     _delay((unsigned long)((20)*(8000000/4000000.0)));
     ADCON0bits.GO = 1;
     resultado:
-            if (ADCON0bits.GO_DONE ==1){goto resultado;}
-            else {ADCON0bits.ADON=0; return ADRESH;}
+    if (ADCON0bits.GO_DONE ==1){goto resultado;}
+    else {ADCON0bits.ADON=0; return ADRESH;}
 
 }

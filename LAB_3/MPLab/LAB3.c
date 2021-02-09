@@ -115,17 +115,17 @@ void main(void) {
       vADC2 = ValorADC(1);
       V1 = conversion(vADC1);
       V2 = conversion(vADC2);
-      Write_USART_String("V1    V2   contador \n");
-      sprintf(data, "%2.1f   %2.1f  %d", V1, V2, contador);
+      Write_USART_String("V1   V2   contador \n");
+      sprintf(data, "%2.1f   %2.1f   %d", V1, V2, contador);
       Write_USART_String(data);
       Write_USART(13);
       Write_USART(10);
       LCD_Clear();
       LCD_Cursor(1,1);
-      LCD_Print("V1    V2    Conta");
+      LCD_Print("V1   V2   conta");
       LCD_Cursor(2,0);
       LCD_Print(data);
       __delay_ms(500);      
     }
-    
+    return;
 }
