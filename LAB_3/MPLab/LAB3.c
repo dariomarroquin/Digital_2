@@ -36,7 +36,7 @@
 //-----------------------------------------------------------------------------
 //Creacion Variables
 //-----------------------------------------------------------------------------
-uint8_t contador = 0;
+uint8_t contador = 0; 
 uint8_t vADC1;
 uint8_t vADC2;
 float V1= 0.0;
@@ -97,7 +97,7 @@ float conversion(uint8_t b){
 void __interrupt() ISR(){
     if (RCIF == 1){         //ACTIVA UART
         RCIF = 0;           //Apaga bander
-        RUSART= Read_USART();   //Lee valor recibido
+        RUSART= Read_USART();   //Lee valor recibido 
         if (RUSART == '+'){contador++;}     //Lee para sumar o restar contador
         else if (RUSART== '-'){contador--;}    
     };
