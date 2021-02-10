@@ -19,7 +19,7 @@ void config_ADC () {
 
 uint8_t ValorADC (uint8_t x){
     switch (x){
-        case 0: TRISAbits.TRISA0 = 1; ANSELbits.ANS0 = 1; ADCON0bits.CHS = 0;   break;
+        case 0: TRISAbits.TRISA0 = 1; ANSELbits.ANS0 = 1; ADCON0bits.CHS = 0;   break; //Aqui se definen los puertos que cuentan con ADC para poder realizar la conversion al pic
         case 1: TRISAbits.TRISA1 = 1; ANSELbits.ANS1 = 1; ADCON0bits.CHS = 1;   break;
         case 2: TRISAbits.TRISA2 = 1; ANSELbits.ANS2 = 1; ADCON0bits.CHS = 2;   break;
         case 3: TRISAbits.TRISA3 = 1; ANSELbits.ANS3 = 1; ADCON0bits.CHS = 3;   break;

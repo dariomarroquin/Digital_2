@@ -88,43 +88,43 @@ void Setup(void){
 //Conversion
 //-----------------------------------------------------------------------------
 float conversion(uint8_t b){
-    return b*0.0196;
+    return b*0.0196;        //Convertir voltaje a binario
 }
 
 //-----------------------------------------------------------------------------
 //Interrupcion
 //-----------------------------------------------------------------------------
 void __interrupt() ISR(){
-    if (RCIF == 1){
-        RCIF = 0;
-        RUSART= Read_USART();
-        if (RUSART == '+'){contador++;}
+    if (RCIF == 1){         //ACTIVA UART
+        RCIF = 0;           //Apaga bander
+        RUSART= Read_USART();   //Lee valor recibido
+        if (RUSART == '+'){contador++;}     //Lee para sumar o restar contador
         else if (RUSART== '-'){contador--;}    
     };
 }
 
 
 void main(void) {
-    Setup();
-    config_ADC();
-    USART_Init(9600);
-    LCD_ON();
-    LCD_Clear();
+    Setup();        //Config puertos
+    config_ADC();   //Config ADC
+    USART_Init(9600);   //Baudrate usart
+    LCD_ON();           //Encender LCD
+    LCD_Clear();        //Limpiar LCD
     while(1){
-      vADC1 = ValorADC(0);
+      vADC1 = ValorADC(0);  //Leer ADC y guardar en variables
       vADC2 = ValorADC(1);
-      V1 = conversion(vADC1);
+      V1 = conversion(vADC1); //Voltajes a binarios
       V2 = conversion(vADC2);
-      Write_USART_String("V1   V2   contador \n");
-      sprintf(data, "%2.1f   %2.1f   %d", V1, V2, contador);
-      Write_USART_String(data);
-      Write_USART(13);
-      Write_USART(10);
-      LCD_Clear();
-      LCD_Cursor(1,1);
-      LCD_Print("V1   V2   conta");
-      LCD_Cursor(2,0);
-      LCD_Print(data);
+      Write_USART_String("V1   V2   contador \n");  // Datos del pic a cmd
+      sprintf(data, "%2.1f   %2.1f   %d", V1, V2, contador); //Voltajes a string para envio a compu
+      Write_USART_String(data);         //Envia string de valores a computadora
+      Write_USART(13);                  //Estas ecuaciones dan salto de line
+      Write_USART(10);          
+      LCD_Clear();                      //Limpiar LCD
+      LCD_Cursor(1,1);                  //Cursor en prumera fila
+      LCD_Print("V1   V2   conta");     //Titulos de tabla
+      LCD_Cursor(2,0);                  //Cursor a segunda fila
+      LCD_Print(data);                  //Imprimir datos en LCD
       __delay_ms(500);      
     }
     return;
