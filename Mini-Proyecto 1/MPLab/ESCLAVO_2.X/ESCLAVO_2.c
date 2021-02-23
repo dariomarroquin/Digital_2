@@ -1,5 +1,5 @@
 /*
- * File:   LAB2.c
+ * File:   ESCLAVO_2
  * Author: Dario Marroquin
  * Carne:  18269
  * Created on 29 de enero de 2021, 8:49
