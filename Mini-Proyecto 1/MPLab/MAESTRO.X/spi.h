@@ -7,5 +7,5 @@
 #define SPI_H
 
 #include <xc.h>
-void SPIMas(void);
+void SPIMas(void); 
 #endif

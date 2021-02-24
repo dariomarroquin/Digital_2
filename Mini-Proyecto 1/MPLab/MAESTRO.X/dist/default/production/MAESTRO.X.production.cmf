@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\crade\AppData\Local\Temp\sbjo.o
-reset_vec CODE 0 0 0 3 2
-end_init CODE 0 E E 3 2
-config CONFIG 4 2007 2007 2 2
 $dist/default/production\MAESTRO.X.production.o
 cinit CODE 0 11 11 E 2
 text1 CODE 0 1F 1F 188 2
@@ -41,6 +37,10 @@ bssBANK0 BANK0 1 4B 4B 20 1
 strings STRING 0 402 402 42 2
 clrtext CODE 0 5D4 5D4 8 2
 bssCOMMON COMMON 1 79 79 1 1
+config CONFIG 4 2007 2007 2 2
+$C:\Users\crade\AppData\Local\Temp\s13f4.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 E E 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -88,17 +88,17 @@ STRING 5DC-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MAESTRO.X.production.o
-11 cinit CODE >1073:C:\Users\crade\AppData\Local\Temp\sbjo.s
-11 cinit CODE >1076:C:\Users\crade\AppData\Local\Temp\sbjo.s
-11 cinit CODE >1126:C:\Users\crade\AppData\Local\Temp\sbjo.s
-12 cinit CODE >1129:C:\Users\crade\AppData\Local\Temp\sbjo.s
-13 cinit CODE >1130:C:\Users\crade\AppData\Local\Temp\sbjo.s
-14 cinit CODE >1131:C:\Users\crade\AppData\Local\Temp\sbjo.s
-15 cinit CODE >1132:C:\Users\crade\AppData\Local\Temp\sbjo.s
-16 cinit CODE >1133:C:\Users\crade\AppData\Local\Temp\sbjo.s
-1B cinit CODE >1139:C:\Users\crade\AppData\Local\Temp\sbjo.s
-1B cinit CODE >1141:C:\Users\crade\AppData\Local\Temp\sbjo.s
-1C cinit CODE >1142:C:\Users\crade\AppData\Local\Temp\sbjo.s
+11 cinit CODE >1073:C:\Users\crade\AppData\Local\Temp\s13f4.s
+11 cinit CODE >1076:C:\Users\crade\AppData\Local\Temp\s13f4.s
+11 cinit CODE >1126:C:\Users\crade\AppData\Local\Temp\s13f4.s
+12 cinit CODE >1129:C:\Users\crade\AppData\Local\Temp\s13f4.s
+13 cinit CODE >1130:C:\Users\crade\AppData\Local\Temp\s13f4.s
+14 cinit CODE >1131:C:\Users\crade\AppData\Local\Temp\s13f4.s
+15 cinit CODE >1132:C:\Users\crade\AppData\Local\Temp\s13f4.s
+16 cinit CODE >1133:C:\Users\crade\AppData\Local\Temp\s13f4.s
+1B cinit CODE >1139:C:\Users\crade\AppData\Local\Temp\s13f4.s
+1B cinit CODE >1141:C:\Users\crade\AppData\Local\Temp\s13f4.s
+1C cinit CODE >1142:C:\Users\crade\AppData\Local\Temp\s13f4.s
 4 intentry CODE >91:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
 560 text16 CODE >91:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
 560 text16 CODE >92:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
@@ -321,16 +321,16 @@ FE text1 CODE >1407:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\
 266 maintext CODE >152:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
 293 maintext CODE >154:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
 29D maintext CODE >155:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\MAESTRO.X\MAESTRO.c
-5D4 clrtext CODE >1113:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D4 clrtext CODE >1114:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D5 clrtext CODE >1115:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D5 clrtext CODE >1116:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D6 clrtext CODE >1117:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D7 clrtext CODE >1118:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D8 clrtext CODE >1119:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5D9 clrtext CODE >1120:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5DA clrtext CODE >1121:C:\Users\crade\AppData\Local\Temp\sbjo.s
-5DB clrtext CODE >1122:C:\Users\crade\AppData\Local\Temp\sbjo.s
+5D4 clrtext CODE >1113:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D4 clrtext CODE >1114:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D5 clrtext CODE >1115:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D5 clrtext CODE >1116:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D6 clrtext CODE >1117:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D7 clrtext CODE >1118:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D8 clrtext CODE >1119:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5D9 clrtext CODE >1120:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5DA clrtext CODE >1121:C:\Users\crade\AppData\Local\Temp\s13f4.s
+5DB clrtext CODE >1122:C:\Users\crade\AppData\Local\Temp\s13f4.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -359,13 +359,13 @@ _c2 55 0 BANK0 1 bssBANK0 dist/default/production\MAESTRO.X.production.o
 LCDGoto@ln 20 0 BANK0 1 cstackBANK0 dist/default/production\MAESTRO.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _IOCB 96 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\sbjo.o
+___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\s13f4.o
 _buff 57 0 BANK0 1 bssBANK0 dist/default/production\MAESTRO.X.production.o
 _main 34E 0 CODE 0 maintext dist/default/production\MAESTRO.X.production.o
 _temp 54 0 BANK0 1 bssBANK0 dist/default/production\MAESTRO.X.production.o
 _vint 52 0 BANK0 1 bssBANK0 dist/default/production\MAESTRO.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
-start 1C 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\sbjo.o
+start 1C 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\s13f4.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
@@ -382,12 +382,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 USART_Initialize@x 75 0 COMMON 1 cstackCOMMON dist/default/production\MAESTRO.X.production.o
 __end_of_USART_Initialize 778 0 CODE 0 text6 dist/default/production\MAESTRO.X.production.o
 __end_of_LCDWrite B90 0 CODE 0 text15 dist/default/production\MAESTRO.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\sbjo.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\s13f4.o
 __end_of_LCD_Initialize 9C2 0 CODE 0 text10 dist/default/production\MAESTRO.X.production.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __end_of_LCDPutChar B28 0 CODE 0 text12 dist/default/production\MAESTRO.X.production.o
@@ -407,8 +407,8 @@ __end_of___aldiv 692 0 CODE 0 text7 dist/default/production\MAESTRO.X.production
 __end_of___lwdiv 804 0 CODE 0 text5 dist/default/production\MAESTRO.X.production.o
 __end_of___lwmod 900 0 CODE 0 text4 dist/default/production\MAESTRO.X.production.o
 __size_of_isdigit 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\sbjo.o
-___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\sbjo.o
+___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\s13f4.o
+___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\s13f4.o
 __end_of_LCDGoto 962 0 CODE 0 text13 dist/default/production\MAESTRO.X.production.o
 __end_of_LCDPutCmd B70 0 CODE 0 text14 dist/default/production\MAESTRO.X.production.o
 __end_of_LCDPutStr A1C 0 CODE 0 text11 dist/default/production\MAESTRO.X.production.o
@@ -431,7 +431,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 USART_Initialize@baudrate 2E 0 BANK0 1 cstackBANK0 dist/default/production\MAESTRO.X.production.o
 _isdigit$983 74 0 COMMON 1 cstackCOMMON dist/default/production\MAESTRO.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\sbjo.o
+___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\s13f4.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -487,7 +487,7 @@ __end_of_ISR B02 0 CODE 0 text16 dist/default/production\MAESTRO.X.production.o
 _valores 4F 0 BANK0 1 bssBANK0 dist/default/production\MAESTRO.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab 804 0 STRING 0 strings dist/default/production\MAESTRO.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\sbjo.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\s13f4.o
 __size_of_LCD_Initialize 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 __size_of___wmul 0 0 ABS 0 - dist/default/production\MAESTRO.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

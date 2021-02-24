@@ -3,6 +3,8 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
+"11 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab/ESCLAVO_2.X/spies.c
+[v _SPI_ES SPI_ES `(v  1 e 1 0 ]
 "15 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\ADC.c
 [v _config_ADC config_ADC `(v  1 e 1 0 ]
 "20
@@ -11,6 +13,7 @@
 [v ___flge __flge `(b  1 e 0 0 ]
 "43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
+[v i1___fltol __fltol `(l  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
@@ -23,23 +26,23 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"62 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
+"64 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
 [v _Setup Setup `(v  1 e 1 0 ]
-"78
+"80
 [v _interr interr `(v  1 e 1 0 ]
-"84
+"86
 [v _ISR ISR `II(v  1 e 1 0 ]
-"89
+"99
 [v _conversion conversion `(f  1 e 4 0 ]
-"93
+"103
 [v _conversiond conversiond `(f  1 e 4 0 ]
-"97
+"107
 [v _main main `(v  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S69 . 1 `uc 1 RD0 1 0 :1:0 
+[s S182 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -49,8 +52,8 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "369
-[u S78 . 1 `S69 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES78  1 e 1 @8 ]
+[u S191 . 1 `S182 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES191  1 e 1 @8 ]
 [s S32 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
@@ -68,15 +71,30 @@
 ]
 [u S46 . 1 `S32 1 . 1 0 `S41 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES46  1 e 1 @11 ]
+[s S64 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S72 . 1 `S64 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES72  1 e 1 @12 ]
+"843
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"850
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
-[s S130 . 1 `uc 1 ADON 1 0 :1:0 
+[s S259 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S135 . 1 `uc 1 . 1 0 :1:0 
+[s S264 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -85,15 +103,15 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S144 . 1 `uc 1 . 1 0 :1:0 
+[s S273 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S147 . 1 `uc 1 . 1 0 :1:0 
+[s S276 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S150 . 1 `S130 1 . 1 0 `S135 1 . 1 0 `S144 1 . 1 0 `S147 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES150  1 e 1 @31 ]
-[s S177 . 1 `uc 1 TRISA0 1 0 :1:0 
+[u S279 . 1 `S259 1 . 1 0 `S264 1 . 1 0 `S273 1 . 1 0 `S276 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES279  1 e 1 @31 ]
+[s S306 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -103,11 +121,11 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1433
-[u S186 . 1 `S177 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES186  1 e 1 @133 ]
+[u S315 . 1 `S306 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES315  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S232 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S361 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -117,23 +135,91 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1495
-[u S241 . 1 `S232 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES241  1 e 1 @134 ]
+[u S370 . 1 `S361 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES370  1 e 1 @134 ]
+[s S457 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1557
+[u S466 . 1 `S457 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES466  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S219 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S348 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1677
-[u S224 . 1 `S219 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES224  1 e 1 @137 ]
+[u S353 . 1 `S348 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES353  1 e 1 @137 ]
+[s S503 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S511 . 1 `S503 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES511  1 e 1 @140 ]
+"2177
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S83 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2231
+[s S92 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S97 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S103 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S108 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S113 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S118 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S123 . 1 `S83 1 . 1 0 `S92 1 . 1 0 `S97 1 . 1 0 `S103 1 . 1 0 `S108 1 . 1 0 `S113 1 . 1 0 `S118 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES123  1 e 1 @148 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
-[s S198 . 1 `uc 1 ANS0 1 0 :1:0 
+[s S327 . 1 `uc 1 ANS0 1 0 :1:0 
 `uc 1 ANS1 1 0 :1:1 
 `uc 1 ANS2 1 0 :1:2 
 `uc 1 ANS3 1 0 :1:3 
@@ -143,11 +229,11 @@
 `uc 1 ANS7 1 0 :1:7 
 ]
 "3404
-[u S207 . 1 `S198 1 . 1 0 ]
-[v _ANSELbits ANSELbits `VES207  1 e 1 @392 ]
+[u S336 . 1 `S327 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES336  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S253 . 1 `uc 1 ANS8 1 0 :1:0 
+[s S382 . 1 `uc 1 ANS8 1 0 :1:0 
 `uc 1 ANS9 1 0 :1:1 
 `uc 1 ANS10 1 0 :1:2 
 `uc 1 ANS11 1 0 :1:3 
@@ -155,78 +241,80 @@
 `uc 1 ANS13 1 0 :1:5 
 ]
 "3464
-[u S260 . 1 `S253 1 . 1 0 ]
-[v _ANSELHbits ANSELHbits `VES260  1 e 1 @393 ]
-"46 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
+[u S389 . 1 `S382 1 . 1 0 ]
+[v _ANSELHbits ANSELHbits `VES389  1 e 1 @393 ]
+"47 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
 [v _vADC vADC `uc  1 e 1 0 ]
-"47
-[v _V1 V1 `f  1 e 4 0 ]
 "48
+[v _V1 V1 `f  1 e 4 0 ]
+"49
 [v _VD VD `f  1 e 4 0 ]
-"97
+"51
+[v _valor valor `uc  1 e 1 0 ]
+"107
 [v _main main `(v  1 e 1 0 ]
 {
-"124
+"135
 } 0
-"78
+"80
 [v _interr interr `(v  1 e 1 0 ]
 {
-"81
+"83
 } 0
-"93
+"103
 [v _conversiond conversiond `(f  1 e 4 0 ]
 {
 [v conversiond@b b `uc  1 a 1 wreg ]
 [v conversiond@b b `uc  1 a 1 wreg ]
-[v conversiond@b b `uc  1 a 1 40 ]
-"95
+[v conversiond@b b `uc  1 a 1 48 ]
+"105
 } 0
-"89
+"99
 [v _conversion conversion `(f  1 e 4 0 ]
 {
 [v conversion@b b `uc  1 a 1 wreg ]
 [v conversion@b b `uc  1 a 1 wreg ]
-[v conversion@b b `uc  1 a 1 40 ]
-"91
+[v conversion@b b `uc  1 a 1 48 ]
+"101
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 {
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
 "13
-[v ___xxtofl@arg arg `ul  1 a 4 2 ]
+[v ___xxtofl@arg arg `ul  1 a 4 10 ]
 "12
-[v ___xxtofl@exp exp `uc  1 a 1 1 ]
+[v ___xxtofl@exp exp `uc  1 a 1 9 ]
 "10
 [v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 2 ]
+[v ___xxtofl@val val `l  1 p 4 0 ]
 "15
-[v ___xxtofl@sign sign `uc  1 a 1 0 ]
+[v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S600 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S810 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S605 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S608 . 4 `l 1 i 4 0 `d 1 f 4 0 `S600 1 fAsBytes 4 0 `S605 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S608  1 a 4 26 ]
+[s S815 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S818 . 4 `l 1 i 4 0 `d 1 f 4 0 `S810 1 fAsBytes 4 0 `S815 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S818  1 a 4 34 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 21 ]
-[s S677 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 28 ]
+[s S887 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S680 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S677 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S680  1 a 2 30 ]
+[u S890 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S887 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S890  1 a 2 38 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 25 ]
+[v ___flmul@bexp bexp `uc  1 a 1 33 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 20 ]
+[v ___flmul@aexp aexp `uc  1 a 1 32 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 19 ]
+[v ___flmul@sign sign `uc  1 a 1 27 ]
 "8
-[v ___flmul@b b `d  1 p 4 6 ]
-[v ___flmul@a a `d  1 p 4 10 ]
+[v ___flmul@b b `d  1 p 4 14 ]
+[v ___flmul@a a `d  1 p 4 18 ]
 "205
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
@@ -234,30 +322,30 @@
 {
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 2 ]
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
 "5
-[v __Umul8_16@product product `ui  1 a 2 0 ]
+[v __Umul8_16@product product `ui  1 a 2 4 ]
 "4
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 2 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 4 ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
 "60
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 7 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 6 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 9 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 2 ]
+[v ___fltol@f1 f1 `d  1 p 4 0 ]
 "70
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\flge.c
 [v ___flge __flge `(b  1 e 0 0 ]
 {
-[v ___flge@ff1 ff1 `d  1 p 4 2 ]
-[v ___flge@ff2 ff2 `d  1 p 4 6 ]
+[v ___flge@ff1 ff1 `d  1 p 4 0 ]
+[v ___flge@ff2 ff2 `d  1 p 4 4 ]
 "19
 } 0
 "20 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\ADC.c
@@ -265,21 +353,36 @@
 {
 [v ValorADC@x x `uc  1 a 1 wreg ]
 [v ValorADC@x x `uc  1 a 1 wreg ]
-[v ValorADC@x x `uc  1 a 1 4 ]
+[v ValorADC@x x `uc  1 a 1 2 ]
 "45
 } 0
-"62 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
+"64 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
 [v _Setup Setup `(v  1 e 1 0 ]
 {
-"73
+"75
 } 0
 "15 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\ADC.c
 [v _config_ADC config_ADC `(v  1 e 1 0 ]
 {
 "18
 } 0
-"84 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
+"11 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab/ESCLAVO_2.X/spies.c
+[v _SPI_ES SPI_ES `(v  1 e 1 0 ]
+{
+"21
+} 0
+"86 C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 1\MPLab\ESCLAVO_3.X\Esclavo_3.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"87
+"97
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\fltol.c
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v i1___fltol@exp1 exp1 `uc  1 a 1 10 ]
+[v i1___fltol@sign1 sign1 `uc  1 a 1 9 ]
+"43
+[v i1___fltol@f1 f1 `d  1 p 4 0 ]
+"70
 } 0

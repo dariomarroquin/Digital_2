@@ -37,6 +37,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "ADC.h"
+#include "spies.h"
 
 //-----------------------------------------------------------------------------
 //Creacion Variables
@@ -47,6 +48,7 @@ char vADC=0;
 float V1= 0.0;
 float VD= 0.0;
 uint16_t temperature = 0;
+uint8_t valor = 0;
 //-----------------------------------------------------------------------------
 //Funciones
 //--------------------------------------------
@@ -84,6 +86,14 @@ void interr (void){
 void __interrupt() ISR(){
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    
+    if(PIR1bits.SSPIF){
+        if(!SSPSTATbits.BF){
+            valor = SSPBUF;
+        }
+        SSPBUF = VD;
+        PIR1bits.SSPIF = 0;
+    }
 }
 
 float conversion(uint8_t b){
@@ -97,6 +107,7 @@ float conversiond(uint8_t b){
 void main(void) {
     Setup();        //Config puertos
     interr();
+    SPI_ES();
     while (1) {
         vADC= ValorADC(0);
         V1 = conversion(vADC);

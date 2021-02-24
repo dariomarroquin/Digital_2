@@ -17,6 +17,7 @@
 #include <stdint.h>
 #include <pic16f887.h>
 #include "INTERRB.h"
+#include "spies.h"
 
 
 // PIC16F887 Configuration Bit Settings
@@ -48,6 +49,7 @@
 #define _XTAL_FREQ 8000000            //8 MHZ
 
 
+
 //-----------------------------------------------------------------------------
 //Funciones
 //--------------------------------------------
@@ -61,6 +63,7 @@ void __interrupt() ISR(void); //Interrupciones
 //----------------------------------------------------------------------------
 
 char contador = 0;
+uint8_t valor;
 
 //-----------------------------------------------------------------------------
 //CONFIG puertos
@@ -90,13 +93,21 @@ void __interrupt() ISR(void){
            }    
        } 
        INTCONbits.RBIF = 0; 
+       
+       if(PIR1bits.SSPIF){
+        if(SSPSTATbits.BF){
+            valor = SSPBUF;
+        }
+        SSPBUF = contador;
+        PIR1bits.SSPIF = 0;
+    }
 }
  
 
 void main(void) {
     Setup();
     config_INTB();
-    
+    SPI_ES();
     while (1){
         PORTD = contador;
   

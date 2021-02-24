@@ -30,12 +30,14 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "ADC.h"
+#include "spies.h"
 
 
 //-----------------------------------------------------------------------------
 //Creacion Variables
 //-----------------------------------------------------------------------------
 char vADC=0;
+float V1= 0.0;
 
 //-----------------------------------------------------------------------------
 //Funciones
@@ -53,6 +55,7 @@ void Setup(void){
     ANSEL=0;
     ANSELH=0;
     config_ADC();
+    SPI_ES();
        
 }
 
@@ -66,10 +69,25 @@ void interr (void){
     INTCONbits.PEIE = 1;
 }
 
+//-----------------------------------------------------------------------------
+//Conversion
+//-----------------------------------------------------------------------------
+float conversion(uint8_t b){
+    return b*0.0196;        //Convertir voltaje a binario
+}
 
 void __interrupt() ISR(){
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    
+    if(PIR1bits.SSPIF){
+        if(!SSPSTATbits.BF){
+            PORTD = SSPBUF;
+        }
+        SSPBUF = V1;
+        PIR1bits.SSPIF = 0;
+    }
+    
 }
 
 
@@ -78,6 +96,7 @@ void main(void) {
     interr();
     while (1) {
         vADC= ValorADC(0);
+        V1 = conversion(vADC);
         PORTB=vADC;
     
     }

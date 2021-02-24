@@ -2822,6 +2822,17 @@ typedef uint16_t uintptr_t;
 void config_INTB (void);
 # 19 "ESCLAVO_2.c" 2
 
+# 1 "./spies.h" 1
+
+
+
+
+
+
+
+void SPI_ES(void);
+# 20 "ESCLAVO_2.c" 2
+
 
 
 
@@ -2843,7 +2854,7 @@ void config_INTB (void);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 54 "ESCLAVO_2.c"
+# 56 "ESCLAVO_2.c"
 void Setup (void);
 void __attribute__((picinterrupt(("")))) ISR(void);
 
@@ -2854,6 +2865,7 @@ void __attribute__((picinterrupt(("")))) ISR(void);
 
 
 char contador = 0;
+uint8_t valor;
 
 
 
@@ -2883,13 +2895,21 @@ void __attribute__((picinterrupt(("")))) ISR(void){
            }
        }
        INTCONbits.RBIF = 0;
+
+       if(PIR1bits.SSPIF){
+        if(SSPSTATbits.BF){
+            valor = SSPBUF;
+        }
+        SSPBUF = contador;
+        PIR1bits.SSPIF = 0;
+    }
 }
 
 
 void main(void) {
     Setup();
     config_INTB();
-
+    SPI_ES();
     while (1){
         PORTD = contador;
 

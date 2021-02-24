@@ -2765,12 +2765,24 @@ void config_ADC();
 uint8_t ValorADC(uint8_t x);
 # 32 "ESCLAVO_1.c" 2
 
+# 1 "./spies.h" 1
+
+
+
+
+
+
+
+void SPI_ES(void);
+# 33 "ESCLAVO_1.c" 2
+
 
 
 
 
 
 char vADC=0;
+float V1= 0.0;
 
 
 
@@ -2788,6 +2800,7 @@ void Setup(void){
     ANSEL=0;
     ANSELH=0;
     config_ADC();
+    SPI_ES();
 
 }
 
@@ -2802,9 +2815,24 @@ void interr (void){
 }
 
 
+
+
+float conversion(uint8_t b){
+    return b*0.0196;
+}
+
 void __attribute__((picinterrupt(("")))) ISR(){
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+
+    if(PIR1bits.SSPIF){
+        if(!SSPSTATbits.BF){
+            PORTD = SSPBUF;
+        }
+        SSPBUF = V1;
+        PIR1bits.SSPIF = 0;
+    }
+
 }
 
 
@@ -2813,6 +2841,7 @@ void main(void) {
     interr();
     while (1) {
         vADC= ValorADC(0);
+        V1 = conversion(vADC);
         PORTB=vADC;
 
     }
