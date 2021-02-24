@@ -40,10 +40,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #ifndef _LCD_XC_H
 #define	_LCD_XC_H
 
+#define _XTAL_FREQ 8000000  
 /**
   Section: Included Files
 */
-#include "lcs.h"
+#include <stdint.h>
 #include <xc.h>
 
 /**
