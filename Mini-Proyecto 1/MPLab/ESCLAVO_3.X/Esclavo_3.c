@@ -34,6 +34,9 @@
 
 
 #include <xc.h>
+#include <stdint.h>
+#include <stdio.h>
+#include "ADC.h"
 
 //-----------------------------------------------------------------------------
 //Creacion Variables
@@ -41,7 +44,8 @@
 
 #define _XTAL_FREQ 8000000            //8 MHZ
 char vADC=0;
-
+float V1= 0.0;
+uint16_t temperature = 0;
 //-----------------------------------------------------------------------------
 //Funciones
 //--------------------------------------------
@@ -56,6 +60,10 @@ void __interrupt() ISR();
 void Setup(void){
     TRISB=0;
     PORTB=0;
+    
+    TRISD=0;
+    PORTD=0;
+    
     ANSEL=0;
     ANSELH=0;
     config_ADC();
@@ -76,12 +84,33 @@ void __interrupt() ISR(){
     INTCONbits.PEIE = 1;
 }
 
+float conversion(uint8_t b){
+    return b*0.0196;        //Convertir voltaje a binario
+}
 
 void main(void) {
     Setup();        //Config puertos
     interr();
     while (1) {
         vADC= ValorADC(0);
+        V1 = conversion(vADC);
+        if (V1 > 0.3528){
+            PORTDbits.RD0 =1;
+            PORTDbits.RD1 =0;
+            PORTDbits.RD2 =0;
+        }
+        
+        if ((V1 <= 0.3528) && (V1 >= 0.25)) {
+            PORTDbits.RD1 =1;
+            PORTDbits.RD0 =0;
+            PORTDbits.RD2 =0;
+        }
+        
+        if (V1 < 0.25){
+            PORTDbits.RD2 =1;
+            PORTDbits.RD1 =0;
+            PORTDbits.RD0 =0;
+        }
         PORTB=vADC;
     
     }
