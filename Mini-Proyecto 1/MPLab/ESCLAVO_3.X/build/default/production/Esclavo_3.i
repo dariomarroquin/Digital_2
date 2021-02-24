@@ -2857,12 +2857,14 @@ uint8_t ValorADC(uint8_t x);
 
 char vADC=0;
 float V1= 0.0;
+float VD= 0.0;
 uint16_t temperature = 0;
 
 
 
 void Setup (void);
 float conversion(uint8_t b);
+float conversiond(uint8_t b);
 void __attribute__((picinterrupt(("")))) ISR();
 
 
@@ -2900,12 +2902,17 @@ float conversion(uint8_t b){
     return b*0.0196;
 }
 
+float conversiond(uint8_t b){
+    return b*2.55;
+}
+
 void main(void) {
     Setup();
     interr();
     while (1) {
         vADC= ValorADC(0);
         V1 = conversion(vADC);
+        VD = conversiond(V1);
         if (V1 > 0.3528){
             PORTDbits.RD0 =1;
             PORTDbits.RD1 =0;

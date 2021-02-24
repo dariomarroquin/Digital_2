@@ -45,12 +45,14 @@
 #define _XTAL_FREQ 8000000            //8 MHZ
 char vADC=0;
 float V1= 0.0;
+float VD= 0.0;
 uint16_t temperature = 0;
 //-----------------------------------------------------------------------------
 //Funciones
 //--------------------------------------------
 void Setup (void);
 float conversion(uint8_t b);
+float conversiond(uint8_t b);
 void __interrupt() ISR();
 
 
@@ -88,12 +90,17 @@ float conversion(uint8_t b){
     return b*0.0196;        //Convertir voltaje a binario
 }
 
+float conversiond(uint8_t b){
+    return b*2.55;        //Convertir voltaje a decimal
+}
+
 void main(void) {
     Setup();        //Config puertos
     interr();
     while (1) {
         vADC= ValorADC(0);
         V1 = conversion(vADC);
+        VD = conversiond(V1);
         if (V1 > 0.3528){
             PORTDbits.RD0 =1;
             PORTDbits.RD1 =0;
