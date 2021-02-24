@@ -30,6 +30,9 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>
+#include "lcd.h"
+#include "spi.h"
+#include "usart.h"
 
 
 

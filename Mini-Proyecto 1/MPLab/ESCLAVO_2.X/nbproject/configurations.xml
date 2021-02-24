@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>INTERRB.h</itemPath>
+      <itemPath>spies.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,6 +16,7 @@
                    projectFiles="true">
       <itemPath>INTERRB.c</itemPath>
       <itemPath>ESCLAVO_2.c</itemPath>
+      <itemPath>spies.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -2741,7 +2741,39 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 32 "MAESTRO.c" 2
-# 41 "MAESTRO.c"
+
+# 1 "./lcd.h" 1
+# 48 "./lcd.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 49 "./lcd.h" 2
+# 118 "./lcd.h"
+void LCD_Initialize(void);
+# 136 "./lcd.h"
+void LCDPutChar(uint8_t ch);
+# 154 "./lcd.h"
+void LCDPutCmd(uint8_t ch);
+# 172 "./lcd.h"
+void LCDPutStr(const char *);
+# 190 "./lcd.h"
+void LCDWrite(uint8_t ch,uint8_t rs);
+# 212 "./lcd.h"
+void LCDGoto(uint8_t pos, uint8_t ln);
+# 33 "MAESTRO.c" 2
+
+# 1 "./spi.h" 1
+# 10 "./spi.h"
+void SPIMas(void);
+# 34 "MAESTRO.c" 2
+
+# 1 "./usart.h" 1
+# 11 "./usart.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 11 "./usart.h" 2
+
+
+void USART_Initialize(const long int baudrate);
+# 35 "MAESTRO.c" 2
+# 44 "MAESTRO.c"
 uint8_t v=0;
 uint8_t c1=0;
 uint8_t c2=0;
