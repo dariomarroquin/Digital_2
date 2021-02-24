@@ -2799,6 +2799,8 @@ void Setup(void){
     PORTB=0;
     ANSEL=0;
     ANSELH=0;
+    TRISD= 0;
+    PORTD= 0;
     config_ADC();
     SPI_ES();
 

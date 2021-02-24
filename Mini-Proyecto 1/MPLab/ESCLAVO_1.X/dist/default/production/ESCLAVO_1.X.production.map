@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\ESCLAVO_1.X.production.sym \
   --cmf=dist/default/production\ESCLAVO_1.X.production.cmf -z -Q16F887 \
-  -oC:\Users\crade\AppData\Local\Temp\ss5g.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\crade\AppData\Local\Temp\spag.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/ESCLAVO_1.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\crade\AppData\Local\Temp\ss5g.o \
+  -pfunctab=ENTRY -k C:\Users\crade\AppData\Local\Temp\spag.o \
   dist/default/production\ESCLAVO_1.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\crade\AppData\Local\Temp\ss5g.o
+C:\Users\crade\AppData\Local\Temp\spag.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
@@ -38,15 +38,15 @@ dist/default/production\ESCLAVO_1.X.production.o
                 config                             2007     2007        2        0       4
                 text11                              531      531       7A        8       0
                 text10                              5E3      5E3       2C        8       0
-                text9                               678      678       13        8       0
-                text8                               68B      68B        A        8       0
-                text7                               663      663       15        8       0
+                text9                               67E      67E       13        8       0
+                text8                               691      691        A        8       0
+                text7                               663      663       1B        8       0
                 text6                               374      374      101        8       0
                 text5                               63A      63A       29        8       0
                 text4                                13       13      361        8       0
                 text3                               475      475       BC        8       0
                 text2                               5AB      5AB       38        8       0
-                text1                               695      695        3        8       0
+                text1                               69B      69B        3        8       0
                 maintext                            60F      60F       2B        8       0
                 cstackBANK0                          20       20       32       20       1
                 cstackCOMMON                         70       70        D       70       1
@@ -62,15 +62,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 reset_vec                             0        0        3         0
                 text11                              531      531       7A         0
                 text10                              5E3      5E3       2C         0
-                text9                               678      678       13         0
-                text8                               68B      68B        A         0
-                text7                               663      663       15         0
+                text9                               67E      67E       13         0
+                text8                               691      691        A         0
+                text7                               663      663       1B         0
                 text6                               374      374      101         0
                 text5                               63A      63A       29         0
                 text4                                13       13      361         0
                 text3                               475      475       BC         0
                 text2                               5AB      5AB       38         0
-                text1                               695      695        3         0
+                text1                               69B      69B        3         0
                 maintext                            60F      60F       2B         0
 
         CLASS   STRCODE        
@@ -119,7 +119,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  000694  000698         8       0  CODE        2
+                intentry                       000004  00069A  00069E         8       0  CODE        2
                 cstackBANK0                    000020  000037  000057        20       1  BANK0       1
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
 
@@ -132,13 +132,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         0698-1FFF            800
+                         069E-1FFF            800
         COMMON           007D-007D              1           1
         CONST            0003-0003              1           2
-                         0698-1FFF            100
+                         069E-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         0698-1FFF            100
+                         069E-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0057-006F             19           1
                          00A0-00EF             50
@@ -150,9 +150,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         0698-1FFF           1968
+                         069E-1FFF           1962
         STRING           0003-0003              1           2
-                         0698-1FFF            100
+                         069E-1FFF            100
 
                                   Symbol Table
 
@@ -175,7 +175,7 @@ _PIE1bits                (abs)        008C
 _PIR1bits                (abs)        000C
 _PORTB                   (abs)        0006
 _PORTD                   (abs)        0008
-_SPI_ES                  text9        0678
+_SPI_ES                  text9        067E
 _SSPBUF                  (abs)        0013
 _SSPCON                  (abs)        0014
 _SSPSTAT                 (abs)        0094
@@ -185,6 +185,7 @@ _TRISAbits               (abs)        0085
 _TRISB                   (abs)        0086
 _TRISBbits               (abs)        0086
 _TRISCbits               (abs)        0087
+_TRISD                   (abs)        0088
 _TRISEbits               (abs)        0089
 _V1                      nvBANK0      0052
 _ValorADC                text6        0374
@@ -214,7 +215,7 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        0698
+__Hspace_0               (abs)        069E
 __Hspace_1               (abs)        007D
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
@@ -256,7 +257,7 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        0698
+__S0                     (abs)        069E
 __S1                     (abs)        007D
 __S2                     (abs)        0000
 __S3                     (abs)        0000
@@ -289,17 +290,17 @@ ___xxtofl@exp            cstackBANK0  0029
 ___xxtofl@sign           cstackBANK0  0028
 ___xxtofl@val            cstackBANK0  0020
 __end_of_ISR             text10       060F
-__end_of_SPI_ES          text9        068B
-__end_of_Setup           text7        0678
+__end_of_SPI_ES          text9        0691
+__end_of_Setup           text7        067E
 __end_of_ValorADC        text6        0475
 __end_of__Umul8_16       text5        0663
 __end_of___flmul         text4        0374
 __end_of___fltol         text11       05AB
 __end_of___xxtofl        text3        0531
 __end_of__initialization cinit        000F
-__end_of_config_ADC      text8        0695
+__end_of_config_ADC      text8        069B
 __end_of_conversion      text2        05E3
-__end_of_interr          text1        0698
+__end_of_interr          text1        069E
 __end_of_main            maintext     063A
 __initialization         cinit        000F
 __pcstackBANK0           cstackBANK0  0020
@@ -307,7 +308,7 @@ __pcstackCOMMON          cstackCOMMON 0070
 __pintentry              intentry     0004
 __pmaintext              maintext     060F
 __pnvBANK0               nvBANK0      0052
-__ptext1                 text1        0695
+__ptext1                 text1        069B
 __ptext10                text10       05E3
 __ptext11                text11       0531
 __ptext2                 text2        05AB
@@ -316,8 +317,8 @@ __ptext4                 text4        0013
 __ptext5                 text5        063A
 __ptext6                 text6        0374
 __ptext7                 text7        0663
-__ptext8                 text8        068B
-__ptext9                 text9        0678
+__ptext8                 text8        0691
+__ptext9                 text9        067E
 __size_of_ISR            (abs)        0000
 __size_of_SPI_ES         (abs)        0000
 __size_of_Setup          (abs)        0000
@@ -330,9 +331,9 @@ __size_of_config_ADC     (abs)        0000
 __size_of_conversion     (abs)        0000
 __size_of_interr         (abs)        0000
 __size_of_main           (abs)        0000
-_config_ADC              text8        068B
+_config_ADC              text8        0691
 _conversion              text2        05AB
-_interr                  text1        0695
+_interr                  text1        069B
 _main                    maintext     060F
 _vADC                    nvBANK0      0056
 btemp                    (abs)        007E
@@ -356,7 +357,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 94 in file "ESCLAVO_1.c"
+		line 96 in file "ESCLAVO_1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -388,7 +389,7 @@ Total ram usage:        1 bytes
 
  *************** function _interr *****************
  Defined at:
-		line 67 in file "ESCLAVO_1.c"
+		line 69 in file "ESCLAVO_1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -418,7 +419,7 @@ Total ram usage:        0 bytes
 
  *************** function _conversion *****************
  Defined at:
-		line 75 in file "ESCLAVO_1.c"
+		line 77 in file "ESCLAVO_1.c"
  Parameters:    Size  Location     Type
   b               1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -672,7 +673,7 @@ Total ram usage:        0 bytes
 
  *************** function _ISR *****************
  Defined at:
-		line 79 in file "ESCLAVO_1.c"
+		line 81 in file "ESCLAVO_1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -745,7 +746,7 @@ C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c
 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8_16.c estimated size: 41
 
 spies.c
-		_SPI_ES        		CODE           	0678	0000	19
+		_SPI_ES        		CODE           	067E	0000	19
 
 spies.c estimated size: 19
 
@@ -766,16 +767,16 @@ C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\xxtofl.c estimated s
 
 ADC.c
 		_ValorADC      		CODE           	0374	0000	257
-		_config_ADC    		CODE           	068B	0000	10
+		_config_ADC    		CODE           	0691	0000	10
 
 ADC.c estimated size: 267
 
 ESCLAVO_1.c
-		_interr        		CODE           	0695	0000	3
+		_interr        		CODE           	069B	0000	3
 		_conversion    		CODE           	05AB	0000	56
 		_ISR           		CODE           	05E3	0000	44
 		_main          		CODE           	060F	0000	43
-		_Setup         		CODE           	0663	0000	21
+		_Setup         		CODE           	0663	0000	27
 
-ESCLAVO_1.c estimated size: 167
+ESCLAVO_1.c estimated size: 173
 
