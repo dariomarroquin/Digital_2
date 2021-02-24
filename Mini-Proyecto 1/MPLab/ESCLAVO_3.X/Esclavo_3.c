@@ -3,11 +3,7 @@
 //-----------------------------------------------
 
 
-#include <xc.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <pic16f887.h>
+
 
 
 
@@ -44,9 +40,9 @@
 //--------------------------------------------
 
 #define _XTAL_FREQ 8000000            //8 MHZ
-char vADC=0;
+int vADC=0;
 float V1= 0.0;
-float VD= 0.0;
+
 uint16_t temperature = 0;
 uint8_t valor = 0;
 //-----------------------------------------------------------------------------
@@ -54,7 +50,6 @@ uint8_t valor = 0;
 //--------------------------------------------
 void Setup (void);
 float conversion(uint8_t b);
-float conversiond(uint8_t b);
 void __interrupt() ISR();
 
 
@@ -84,14 +79,12 @@ void interr (void){
 
 
 void __interrupt() ISR(){
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
     
     if(PIR1bits.SSPIF){
         if(!SSPSTATbits.BF){
             valor = SSPBUF;
         }
-        SSPBUF = VD;
+        SSPBUF = vADC;
         PIR1bits.SSPIF = 0;
     }
 }
@@ -100,9 +93,6 @@ float conversion(uint8_t b){
     return b*0.0196;        //Convertir voltaje a binario
 }
 
-float conversiond(uint8_t b){
-    return b*2.55;        //Convertir voltaje a decimal
-}
 
 void main(void) {
     Setup();        //Config puertos
@@ -111,7 +101,6 @@ void main(void) {
     while (1) {
         vADC= ValorADC(0);
         V1 = conversion(vADC);
-        VD = conversiond(V1);
         if (V1 > 0.3528){
             PORTDbits.RD0 =1;
             PORTDbits.RD1 =0;

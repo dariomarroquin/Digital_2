@@ -36,7 +36,7 @@ uint8_t ValorADC (uint8_t x){
         default: return 0;
     }
     ADCON0bits.ADON = 1;
-    __delay_us(20);
+    __delay_us(35);
     ADCON0bits.GO = 1;
     resultado:
     if   (ADCON0bits.GO_DONE ==1){goto resultado;}

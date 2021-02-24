@@ -36,8 +36,8 @@
 //-----------------------------------------------------------------------------
 //Creacion Variables
 //-----------------------------------------------------------------------------
-char vADC=0;
-float V1= 0.0;
+int vADC=0;
+int  V1= 0;
 
 //-----------------------------------------------------------------------------
 //Funciones
@@ -79,14 +79,13 @@ float conversion(uint8_t b){
 }
 
 void __interrupt() ISR(){
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
+
     
     if(PIR1bits.SSPIF){
         if(!SSPSTATbits.BF){
             PORTD = SSPBUF;
         }
-        SSPBUF = V1;
+        SSPBUF = vADC;
         PIR1bits.SSPIF = 0;
     }
     
@@ -98,7 +97,7 @@ void main(void) {
     interr();
     while (1) {
         vADC= ValorADC(0);
-        V1 = conversion(vADC);
+        //V1 = conversion(vADC);
         PORTB=vADC;
     
     }

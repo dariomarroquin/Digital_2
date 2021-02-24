@@ -39,6 +39,9 @@
 //-----------------------------------------------------------------------------
 //Creacion Variables
 //--------------------------------------------
+#define CS PORTCbits.RC0 
+#define CS1 PORTCbits.RC1 
+#define CS2 PORTCbits.RC2 
 
 #define _XTAL_FREQ 8000000            //8 MHZ
 uint8_t v=0;
@@ -60,8 +63,7 @@ void Setup (void);
 //CONFIG puertos
 //-----------------------------------------------------------------------------
 void Setup(void){
-    TRISC=0;
-    PORTC=0b00000110; 
+
     
     ANSEL = 0;
     ANSELH = 0;
@@ -80,6 +82,8 @@ void Setup(void){
     
     IOCB= 0;
     
+    
+    
 }
 
 //-----------------------------------------------------------------------------
@@ -88,16 +92,16 @@ void Setup(void){
 
 
 
-void __interrupt() ISR(){
+void __interrupt() myISR(void){
     if(PIR1bits.TXIF == 1){
        TXREG = buff[c1];
-       if (c1 == 16){
-           c1=0;       }
+       if (c1 == 20){
+           c1=0;       
+       }
+        else {
+            c1++;
+        }   
     }
-    else {
-        c1++;
-    }
-    
 }
 
 
@@ -111,46 +115,40 @@ void main(void) {
     USART_Initialize(9600);
     SPIMas();
     
-    LCDGoto(0,0);
-    LCDPutStr(" S1:    S2:    S3:");
-    
     while(1){
-        PORTCbits.RC0 = 0;
+        CS = 0;
         SSPBUF = 1;
         if (!SSPSTATbits.BF){
-            v=SSPBUF;
+            V1=SSPBUF;
         }
-        __delay_ms(1);
+        __delay_ms(15);
         
-        PORTCbits.RC0 = 1;
-        PORTCbits.RC1 = 0;
+        CS= 1;
+        CS1 = 0;
         SSPBUF = 1;
-        
         if(!SSPSTATbits.BF){
             c2 = SSPBUF;
         }
-        __delay_ms(1);
+        __delay_ms(15);
         
-        PORTCbits.RC1 = 1;
-        PORTCbits.RC2 = 0;
-        SSPBUF = 1;
-        
+        CS1 = 1;
+        CS2 = 0;
+        SSPBUF = 1;  
         if(!SSPSTATbits.BF){
             temp = SSPBUF;
         }
-        __delay_ms(1);
+        __delay_ms(15);
         
         
-        PORTCbits.RC2 = 1;
+        CS2 = 1;
         
         vint = (uint16_t)(((V1*500)/255));
-        for (v = 0; v < 3; v++)
-        {
-           valores[v] = (char)(vint % 10);
-           vint /= 10;
-        }
-        sprintf(buff, "%i.%i%iV %3iC %3iT\r\n", valores[2],valores[1],valores[0],
-                c2,temp);
+  
+        
+        //DISPLAY LCD
+        LCDGoto(0,0);
+        LCDPutStr(" S1:    S2:    S3:");
+        sprintf(buff, "%i.%iV %3i %i\r\n", valores[2],valores[1], c2,temp);
         LCDGoto(0,1);
         LCDPutStr(buff);
         

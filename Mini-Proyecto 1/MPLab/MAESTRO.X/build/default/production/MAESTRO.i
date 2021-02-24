@@ -2793,8 +2793,7 @@ void Setup (void);
 
 
 void Setup(void){
-    TRISC=0;
-    PORTC=0b00000110;
+
 
     ANSEL = 0;
     ANSELH = 0;
@@ -2821,16 +2820,17 @@ void Setup(void){
 
 
 
-void __attribute__((picinterrupt(("")))) ISR(){
+void __attribute__((picinterrupt(("")))) myISR(void){
     if(PIR1bits.TXIF == 1){
        TXREG = buff[c1];
        if (c1 == 16){
            c1=0; }
-    }
-    else {
-        c1++;
-    }
 
+        else {
+            c1++;
+        }
+
+}
 }
 
 
@@ -2847,11 +2847,20 @@ void main(void) {
     LCDGoto(0,0);
     LCDPutStr(" S1:    S2:    S3:");
 
+    TRISCbits.TRISC0 = 0;
+    PORTCbits.RC0 = 0;
+
+    TRISCbits.TRISC1 = 0;
+    PORTCbits.RC1 = 1;
+
+    TRISCbits.TRISC2 = 0;
+    PORTCbits.RC2 = 1;
+
     while(1){
         PORTCbits.RC0 = 0;
         SSPBUF = 1;
         if (!SSPSTATbits.BF){
-            v=SSPBUF;
+            V1=SSPBUF;
         }
         _delay((unsigned long)((1)*(8000000/4000.0)));
 

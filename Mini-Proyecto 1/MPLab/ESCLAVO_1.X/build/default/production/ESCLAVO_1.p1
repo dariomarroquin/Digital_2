@@ -358,10 +358,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "40
-[; ;ESCLAVO_1.c: 40: float V1= 0.0;
-[v _V1 `f ~T0 @X0 1 e ]
+[; ;ESCLAVO_1.c: 40: int V1= 0;
+[v _V1 `i ~T0 @X0 1 e ]
 [i _V1
--> .0.0 `f
+-> 0 `i
 ]
 "52
 [; ;ESCLAVO_1.c: 52: void Setup(void){
@@ -457,8 +457,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 144 ]
 "89
-[; ;ESCLAVO_1.c: 89:         SSPBUF = V1;
-[e = _SSPBUF -> _V1 `uc ]
+[; ;ESCLAVO_1.c: 89:         SSPBUF = vADC;
+[e = _SSPBUF -> _vADC `uc ]
 "90
 [; ;ESCLAVO_1.c: 90:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
@@ -490,9 +490,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "100
 [; ;ESCLAVO_1.c: 100:         vADC= ValorADC(0);
 [e = _vADC -> ( _ValorADC (1 -> -> 0 `i `uc `uc ]
-"101
-[; ;ESCLAVO_1.c: 101:         V1 = conversion(vADC);
-[e = _V1 ( _conversion (1 -> _vADC `uc ]
 "102
 [; ;ESCLAVO_1.c: 102:         PORTB=vADC;
 [e = _PORTB -> _vADC `uc ]

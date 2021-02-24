@@ -2782,7 +2782,7 @@ void SPI_ES(void);
 
 
 char vADC=0;
-float V1= 0.0;
+int V1= 0;
 
 
 
@@ -2831,7 +2831,7 @@ void __attribute__((picinterrupt(("")))) ISR(){
         if(!SSPSTATbits.BF){
             PORTD = SSPBUF;
         }
-        SSPBUF = V1;
+        SSPBUF = vADC;
         PIR1bits.SSPIF = 0;
     }
 
@@ -2843,7 +2843,7 @@ void main(void) {
     interr();
     while (1) {
         vADC= ValorADC(0);
-        V1 = conversion(vADC);
+
         PORTB=vADC;
 
     }

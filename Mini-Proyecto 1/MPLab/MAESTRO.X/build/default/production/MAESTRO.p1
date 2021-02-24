@@ -1,11 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"1540 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"290
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
-"3387
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
@@ -70,7 +64,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "172
 [; ;./lcd.h: 172: void LCDPutStr(const char *);
 [v _LCDPutStr `(v ~T0 @X0 0 ef1`*Cuc ]
-"296 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"1546 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
+"296
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 296:     struct {
 [s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
@@ -431,87 +436,81 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _Setup ]
 [f ]
-"63
-[; ;MAESTRO.c: 63:     TRISC=0;
-[e = _TRISC -> -> 0 `i `uc ]
-"64
-[; ;MAESTRO.c: 64:     PORTC=0b00000110;
-[e = _PORTC -> -> 6 `i `uc ]
-"66
-[; ;MAESTRO.c: 66:     ANSEL = 0;
+"65
+[; ;MAESTRO.c: 65:     ANSEL = 0;
 [e = _ANSEL -> -> 0 `i `uc ]
-"67
-[; ;MAESTRO.c: 67:     ANSELH = 0;
+"66
+[; ;MAESTRO.c: 66:     ANSELH = 0;
 [e = _ANSELH -> -> 0 `i `uc ]
-"69
-[; ;MAESTRO.c: 69:     TRISA= 0;
+"68
+[; ;MAESTRO.c: 68:     TRISA= 0;
 [e = _TRISA -> -> 0 `i `uc ]
-"70
-[; ;MAESTRO.c: 70:     PORTA= 0;
+"69
+[; ;MAESTRO.c: 69:     PORTA= 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"72
-[; ;MAESTRO.c: 72:     TRISB= 0;
+"71
+[; ;MAESTRO.c: 71:     TRISB= 0;
 [e = _TRISB -> -> 0 `i `uc ]
-"73
-[; ;MAESTRO.c: 73:     PORTB= 0;
+"72
+[; ;MAESTRO.c: 72:     PORTB= 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"75
-[; ;MAESTRO.c: 75:     TRISD = 0;
+"74
+[; ;MAESTRO.c: 74:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"76
-[; ;MAESTRO.c: 76:     PORTD= 0;
+"75
+[; ;MAESTRO.c: 75:     PORTD= 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"78
-[; ;MAESTRO.c: 78:     TRISE = 0;
+"77
+[; ;MAESTRO.c: 77:     TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"79
-[; ;MAESTRO.c: 79:     PORTE = 0;
+"78
+[; ;MAESTRO.c: 78:     PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"81
-[; ;MAESTRO.c: 81:     IOCB= 0;
+"80
+[; ;MAESTRO.c: 80:     IOCB= 0;
 [e = _IOCB -> -> 0 `i `uc ]
-"83
-[; ;MAESTRO.c: 83: }
+"82
+[; ;MAESTRO.c: 82: }
 [e :UE 139 ]
 }
-[v $root$_ISR `(v ~T0 @X0 0 e ]
-"91
-[; ;MAESTRO.c: 91: void __attribute__((picinterrupt(("")))) ISR(){
-[v _ISR `(v ~T1 @X0 1 ef ]
+[v $root$_myISR `(v ~T0 @X0 0 e ]
+"90
+[; ;MAESTRO.c: 90: void __attribute__((picinterrupt(("")))) myISR(void){
+[v _myISR `(v ~T1 @X0 1 ef ]
 {
-[e :U _ISR ]
+[e :U _myISR ]
 [f ]
-"92
-[; ;MAESTRO.c: 92:     if(PIR1bits.TXIF == 1){
+"91
+[; ;MAESTRO.c: 91:     if(PIR1bits.TXIF == 1){
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 141  ]
 {
-"93
-[; ;MAESTRO.c: 93:        TXREG = buff[c1];
+"92
+[; ;MAESTRO.c: 92:        TXREG = buff[c1];
 [e = _TXREG -> *U + &U _buff * -> _c1 `ux -> -> # *U &U _buff `ui `ux `uc ]
-"94
-[; ;MAESTRO.c: 94:        if (c1 == 16){
+"93
+[; ;MAESTRO.c: 93:        if (c1 == 16){
 [e $ ! == -> _c1 `i -> 16 `i 142  ]
 {
-"95
-[; ;MAESTRO.c: 95:            c1=0; }
+"94
+[; ;MAESTRO.c: 94:            c1=0; }
 [e = _c1 -> -> 0 `i `uc ]
 }
-[e :U 142 ]
-"96
-[; ;MAESTRO.c: 96:     }
-}
 [e $U 143  ]
-"97
-[; ;MAESTRO.c: 97:     else {
-[e :U 141 ]
+"96
+[; ;MAESTRO.c: 96:         else {
+[e :U 142 ]
 {
-"98
-[; ;MAESTRO.c: 98:         c1++;
+"97
+[; ;MAESTRO.c: 97:             c1++;
 [e ++ _c1 -> -> 1 `i `uc ]
-"99
-[; ;MAESTRO.c: 99:     }
+"98
+[; ;MAESTRO.c: 98:         }
 }
 [e :U 143 ]
+"100
+[; ;MAESTRO.c: 100: }
+}
+[e :U 141 ]
 "101
 [; ;MAESTRO.c: 101: }
 [e :UE 140 ]
@@ -542,121 +541,139 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;MAESTRO.c: 115:     LCDPutStr(" S1:    S2:    S3:");
 [e ( _LCDPutStr (1 :s 1C ]
 "117
-[; ;MAESTRO.c: 117:     while(1){
+[; ;MAESTRO.c: 117:     TRISCbits.TRISC0 = 0;
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
+"118
+[; ;MAESTRO.c: 118:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"120
+[; ;MAESTRO.c: 120:     TRISCbits.TRISC1 = 0;
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
+"121
+[; ;MAESTRO.c: 121:     PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"123
+[; ;MAESTRO.c: 123:     TRISCbits.TRISC2 = 0;
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
+"124
+[; ;MAESTRO.c: 124:     PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"126
+[; ;MAESTRO.c: 126:     while(1){
 [e :U 146 ]
 {
-"118
-[; ;MAESTRO.c: 118:         PORTCbits.RC0 = 0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"119
-[; ;MAESTRO.c: 119:         SSPBUF = 1;
-[e = _SSPBUF -> -> 1 `i `uc ]
-"120
-[; ;MAESTRO.c: 120:         if (!SSPSTATbits.BF){
-[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 148  ]
-{
-"121
-[; ;MAESTRO.c: 121:             v=SSPBUF;
-[e = _v _SSPBUF ]
-"122
-[; ;MAESTRO.c: 122:         }
-}
-[e :U 148 ]
-"123
-[; ;MAESTRO.c: 123:         _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"125
-[; ;MAESTRO.c: 125:         PORTCbits.RC0 = 1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"126
-[; ;MAESTRO.c: 126:         PORTCbits.RC1 = 0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
 "127
-[; ;MAESTRO.c: 127:         SSPBUF = 1;
+[; ;MAESTRO.c: 127:         PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"128
+[; ;MAESTRO.c: 128:         SSPBUF = 1;
 [e = _SSPBUF -> -> 1 `i `uc ]
 "129
-[; ;MAESTRO.c: 129:         if(!SSPSTATbits.BF){
-[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 149  ]
+[; ;MAESTRO.c: 129:         if (!SSPSTATbits.BF){
+[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 148  ]
 {
 "130
-[; ;MAESTRO.c: 130:             c2 = SSPBUF;
-[e = _c2 _SSPBUF ]
+[; ;MAESTRO.c: 130:             V1=SSPBUF;
+[e = _V1 -> _SSPBUF `f ]
 "131
 [; ;MAESTRO.c: 131:         }
 }
-[e :U 149 ]
+[e :U 148 ]
 "132
 [; ;MAESTRO.c: 132:         _delay((unsigned long)((1)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "134
-[; ;MAESTRO.c: 134:         PORTCbits.RC1 = 1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[; ;MAESTRO.c: 134:         PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "135
-[; ;MAESTRO.c: 135:         PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;MAESTRO.c: 135:         PORTCbits.RC1 = 0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
 "136
 [; ;MAESTRO.c: 136:         SSPBUF = 1;
 [e = _SSPBUF -> -> 1 `i `uc ]
 "138
 [; ;MAESTRO.c: 138:         if(!SSPSTATbits.BF){
-[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 150  ]
+[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 149  ]
 {
 "139
-[; ;MAESTRO.c: 139:             temp = SSPBUF;
-[e = _temp _SSPBUF ]
+[; ;MAESTRO.c: 139:             c2 = SSPBUF;
+[e = _c2 _SSPBUF ]
 "140
 [; ;MAESTRO.c: 140:         }
 }
-[e :U 150 ]
+[e :U 149 ]
 "141
 [; ;MAESTRO.c: 141:         _delay((unsigned long)((1)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"143
+[; ;MAESTRO.c: 143:         PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "144
-[; ;MAESTRO.c: 144:         PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"146
-[; ;MAESTRO.c: 146:         vint = (uint16_t)(((V1*500)/255));
-[e = _vint -> / * _V1 -> -> 500 `i `f -> -> 255 `i `f `ui ]
+[; ;MAESTRO.c: 144:         PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+"145
+[; ;MAESTRO.c: 145:         SSPBUF = 1;
+[e = _SSPBUF -> -> 1 `i `uc ]
 "147
-[; ;MAESTRO.c: 147:         for (v = 0; v < 3; v++)
+[; ;MAESTRO.c: 147:         if(!SSPSTATbits.BF){
+[e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 150  ]
+{
+"148
+[; ;MAESTRO.c: 148:             temp = SSPBUF;
+[e = _temp _SSPBUF ]
+"149
+[; ;MAESTRO.c: 149:         }
+}
+[e :U 150 ]
+"150
+[; ;MAESTRO.c: 150:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"153
+[; ;MAESTRO.c: 153:         PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+"155
+[; ;MAESTRO.c: 155:         vint = (uint16_t)(((V1*500)/255));
+[e = _vint -> / * _V1 -> -> 500 `i `f -> -> 255 `i `f `ui ]
+"156
+[; ;MAESTRO.c: 156:         for (v = 0; v < 3; v++)
 {
 [e = _v -> -> 0 `i `uc ]
 [e $ < -> _v `i -> 3 `i 151  ]
 [e $U 152  ]
 [e :U 151 ]
-"148
-[; ;MAESTRO.c: 148:         {
+"157
+[; ;MAESTRO.c: 157:         {
 {
-"149
-[; ;MAESTRO.c: 149:            valores[v] = (char)(vint % 10);
+"158
+[; ;MAESTRO.c: 158:            valores[v] = (char)(vint % 10);
 [e = *U + &U _valores * -> _v `ux -> -> # *U &U _valores `ui `ux -> % _vint -> -> 10 `i `ui `uc ]
-"150
-[; ;MAESTRO.c: 150:            vint /= 10;
+"159
+[; ;MAESTRO.c: 159:            vint /= 10;
 [e =/ _vint -> -> 10 `i `ui ]
-"151
-[; ;MAESTRO.c: 151:         }
+"160
+[; ;MAESTRO.c: 160:         }
 }
 [e ++ _v -> -> 1 `i `uc ]
 [e $ < -> _v `i -> 3 `i 151  ]
 [e :U 152 ]
 }
-"152
-[; ;MAESTRO.c: 152:         sprintf(buff, "%i.%i%iV %3iC %3iT\r\n", valores[2],valores[1],valores[0],
+"161
+[; ;MAESTRO.c: 161:         sprintf(buff, "%i.%i%iV %3iC %3iT\r\n", valores[2],valores[1],valores[0],
 [e ( _sprintf (1 , , , , , (. , &U _buff :s 2C -> *U + &U _valores * -> -> -> 2 `i `ui `ux -> -> # *U &U _valores `ui `ux `i -> *U + &U _valores * -> -> -> 1 `i `ui `ux -> -> # *U &U _valores `ui `ux `i -> *U + &U _valores * -> -> -> 0 `i `ui `ux -> -> # *U &U _valores `ui `ux `i -> _c2 `i -> _temp `i ]
-"154
-[; ;MAESTRO.c: 154:         LCDGoto(0,1);
+"163
+[; ;MAESTRO.c: 163:         LCDGoto(0,1);
 [e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"155
-[; ;MAESTRO.c: 155:         LCDPutStr(buff);
+"164
+[; ;MAESTRO.c: 164:         LCDPutStr(buff);
 [e ( _LCDPutStr (1 -> &U _buff `*Cuc ]
-"157
-[; ;MAESTRO.c: 157:     }
+"166
+[; ;MAESTRO.c: 166:     }
 }
 [e :U 145 ]
 [e $U 146  ]
 [e :U 147 ]
-"163
-[; ;MAESTRO.c: 163: }
+"172
+[; ;MAESTRO.c: 172: }
 [e :UE 144 ]
 }
 [p f _sprintf 8421504 ]
