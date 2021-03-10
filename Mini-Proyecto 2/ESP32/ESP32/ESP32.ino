@@ -23,15 +23,23 @@
 /************************ Example Starts Here *******************************/
 
 // this int will hold the current count for our sketch
-int count = 0;
+int temp = 0;
+String leds;
+int entrada = 0;
 
 // set up the 'counter' feed
-AdafruitIO_Feed *counter = io.feed("counter");
+AdafruitIO_Feed *mini2 = io.feed("Temp");
+
+
+void handleMessage(AdafruitIO_Data *data){
+  leds = data ->value();
+}
 
 void setup() {
-
+  
   // start the serial connection
-  Serial.begin(115200);
+  Serial.begin(9600);
+  pinMode(3, OUTPUT);
 
   // wait for serial monitor to open
   while(! Serial);
@@ -40,13 +48,21 @@ void setup() {
 
   // connect to io.adafruit.com
   io.connect();
-
+  Rojo -> onMessage(handleMessage);
+  Verde -> onMessage(handleMessage);
+  
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
     Serial.print(".");
+    digitalWrite(3, HIGH);
     delay(500);
   }
+  digitalWrite(3, LOW);
 
+  Rojo -> get();
+  Verde -> get();
+
+  
   // we are connected
   Serial.println();
   Serial.println(io.statusText());
@@ -61,13 +77,33 @@ void loop() {
   // io.adafruit.com, and processes any incoming data.
   io.run();
 
-  // save count to the 'counter' feed on Adafruit IO
-  Serial.print("sending -> ");
-  Serial.println(count);
-  counter->save(count);
 
-  // increment the count by 1
-  count++;
+  if (Serial.available() > 0) {
+    entrada = Serial.read();
+    mini2-Z ((entrada,DEC));
+  }
+
+  switch (leds.toInt()){
+    case 00:
+    Serial.write (0x10);
+    break;
+
+    case 01:
+    Serial.write (0x20);
+    break;
+
+    case 10:
+    Serial.write (0x30);
+    break;
+
+    case 11:
+    Serial.write (0x40);
+    break;
+
+    default:
+      break;
+  }
+
 
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
