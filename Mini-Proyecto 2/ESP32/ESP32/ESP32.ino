@@ -1,6 +1,4 @@
 
-#define IO_USERNAME  "dario_marroquin"
-#define IO_KEY       "aio_GLOQ5446PxH8Tu2N2lAHi35Deiu5"
 // Adafruit IO Publish Example
 //
 // Adafruit invests time and resources providing this open source code.
@@ -28,8 +26,9 @@ String leds;
 int entrada = 0;
 
 // set up the 'counter' feed
-AdafruitIO_Feed *mini2 = io.feed("Temp");
-
+AdafruitIO_Feed *mini2 = io.feed("mini2");
+AdafruitIO_Feed *Rojo = io.feed("Rojo");
+AdafruitIO_Feed *Verde = io.feed("Verde");
 
 void handleMessage(AdafruitIO_Data *data){
   leds = data ->value();
@@ -80,7 +79,7 @@ void loop() {
 
   if (Serial.available() > 0) {
     entrada = Serial.read();
-    mini2-Z ((entrada,DEC));
+    mini2->save ((entrada,DEC));
   }
 
   switch (leds.toInt()){
