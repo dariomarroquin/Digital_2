@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="1">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff00000000220000008703000082050000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff00000000220000008703000082050000</PLACEMENT>
   <WINDOW type="default" module="STARTUP"/>
   <WINDOW type="default" module="ISIS"/>
   <WINDOW type="default" module="DXP"/>
@@ -34,13 +34,13 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="78" flags="00000022" y="169" h="250" pid="0" iid="33">
+   <POPUP w="912" x="78" flags="00000022" y="169" h="485" pid="0" iid="33">
     <PROPERTIES>
      <ITEM name="HSplitter1Pos">100</ITEM>
      <ITEM name="VSplitter1Pos">238</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="120" flags="00000022" y="473" h="250" pid="0" iid="49">
+   <POPUP w="450" x="670" flags="00000022" y="228" h="250" pid="0" iid="49">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>
