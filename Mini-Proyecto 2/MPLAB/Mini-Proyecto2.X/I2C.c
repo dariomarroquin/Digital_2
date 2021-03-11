@@ -7,7 +7,7 @@
 
 
 #include <xc.h>
-#include <I2C.h>
+#include "I2C.h"
 
 void I2C_init(){
     TRISC3 = 1;
@@ -39,7 +39,7 @@ void I2C_rstart(void){
 
 void I2C_NACK(void){
     ACKDT = 1;
-    ACKEN 1;
+    ACKEN =1;
     while(ACKEN);
 }
 void I2C_stop(void){
@@ -55,4 +55,8 @@ unsigned char I2C_RX(){
 }
 
 
-unsigned char I2C_TX(unsigned char c);
+unsigned char I2C_TX(unsigned char c){
+    SSPBUF = c;
+    while(BF);
+    I2C_sleep();
+}
