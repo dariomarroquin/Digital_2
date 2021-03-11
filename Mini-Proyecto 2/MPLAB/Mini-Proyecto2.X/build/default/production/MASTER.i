@@ -2780,9 +2780,10 @@ char leds = 0;
 void Setup (void){
 
     ANSEL = 0b00000000;
-    TRISA = 0b00000000;
+    ANSELH = 0b00000000;
+    TRISE= 0b00000000;
 
-    PORTA = 0;
+    PORTE = 0;
     PORTC = 0;
 
 
@@ -2792,19 +2793,19 @@ void Setup (void){
 
 
 void __attribute__((picinterrupt(("")))) myISR(void){
-    if(PIR1bits.RCIF == 1){
-        PIR1bits.RCIF = 0;
+
+
         leds = RCREG;
-    }
+
 
     if (leds == 1) {
-        PORTAbits.RA0 = 0;
+        PORTE = 0b00000000;
     } else if (leds == 2) {
-        PORTAbits.RA0 = 1;
+        PORTE = 0b00000001;
     } else if (leds == 3) {
-        PORTAbits.RA1 = 0;
+        PORTE = 0b00000010;
     } else if (leds == 4) {
-        PORTAbits.RA1 = 1;
+        PORTE = 0b00000011;
     }
     return;
    if(PIR1bits.TXIF == 1){
