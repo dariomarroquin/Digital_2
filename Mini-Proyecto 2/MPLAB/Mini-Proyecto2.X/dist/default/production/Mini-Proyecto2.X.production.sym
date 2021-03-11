@@ -193,7 +193,7 @@ cstackCOMMON 70 79 COMMON 70 1
 cstackBANK0 20 55 BANK0 20 1
 %locals
 dist/default/production\Mini-Proyecto2.X.production.o
-C:\Users\crade\AppData\Local\Temp\smcg.s
+C:\Users\crade\AppData\Local\Temp\scp0.s
 807 11 0 CODE 0
 810 11 0 CODE 0
 845 11 0 CODE 0

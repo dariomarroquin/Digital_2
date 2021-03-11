@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\crade\AppData\Local\Temp\smcg.o
+$C:\Users\crade\AppData\Local\Temp\scp0.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 E E 3 2
 config CONFIG 4 2007 2007 2 2
@@ -82,17 +82,17 @@ STRING 25F-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Mini-Proyecto2.X.production.o
-11 cinit CODE >807:C:\Users\crade\AppData\Local\Temp\smcg.s
-11 cinit CODE >810:C:\Users\crade\AppData\Local\Temp\smcg.s
-11 cinit CODE >845:C:\Users\crade\AppData\Local\Temp\smcg.s
-12 cinit CODE >848:C:\Users\crade\AppData\Local\Temp\smcg.s
-13 cinit CODE >849:C:\Users\crade\AppData\Local\Temp\smcg.s
-14 cinit CODE >850:C:\Users\crade\AppData\Local\Temp\smcg.s
-15 cinit CODE >851:C:\Users\crade\AppData\Local\Temp\smcg.s
-16 cinit CODE >852:C:\Users\crade\AppData\Local\Temp\smcg.s
-1B cinit CODE >858:C:\Users\crade\AppData\Local\Temp\smcg.s
-1B cinit CODE >860:C:\Users\crade\AppData\Local\Temp\smcg.s
-1C cinit CODE >861:C:\Users\crade\AppData\Local\Temp\smcg.s
+11 cinit CODE >807:C:\Users\crade\AppData\Local\Temp\scp0.s
+11 cinit CODE >810:C:\Users\crade\AppData\Local\Temp\scp0.s
+11 cinit CODE >845:C:\Users\crade\AppData\Local\Temp\scp0.s
+12 cinit CODE >848:C:\Users\crade\AppData\Local\Temp\scp0.s
+13 cinit CODE >849:C:\Users\crade\AppData\Local\Temp\scp0.s
+14 cinit CODE >850:C:\Users\crade\AppData\Local\Temp\scp0.s
+15 cinit CODE >851:C:\Users\crade\AppData\Local\Temp\scp0.s
+16 cinit CODE >852:C:\Users\crade\AppData\Local\Temp\scp0.s
+1B cinit CODE >858:C:\Users\crade\AppData\Local\Temp\scp0.s
+1B cinit CODE >860:C:\Users\crade\AppData\Local\Temp\scp0.s
+1C cinit CODE >861:C:\Users\crade\AppData\Local\Temp\scp0.s
 4 intentry CODE >66:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
 1CF text11 CODE >66:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
 1CF text11 CODE >67:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
@@ -207,16 +207,16 @@ F9 text2 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\al
 A0 maintext CODE >106:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
 AB maintext CODE >108:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
 B0 maintext CODE >109:C:\Users\crade\Dropbox\Ingenieria Mecatronica\Cuarto Año     - 2021\Primer Semestre\Digital 2\Labs\Github\Digital_2\Mini-Proyecto 2\MPLAB\Mini-Proyecto2.X\MASTER.c
-247 clrtext CODE >832:C:\Users\crade\AppData\Local\Temp\smcg.s
-247 clrtext CODE >833:C:\Users\crade\AppData\Local\Temp\smcg.s
-248 clrtext CODE >834:C:\Users\crade\AppData\Local\Temp\smcg.s
-248 clrtext CODE >835:C:\Users\crade\AppData\Local\Temp\smcg.s
-249 clrtext CODE >836:C:\Users\crade\AppData\Local\Temp\smcg.s
-24A clrtext CODE >837:C:\Users\crade\AppData\Local\Temp\smcg.s
-24B clrtext CODE >838:C:\Users\crade\AppData\Local\Temp\smcg.s
-24C clrtext CODE >839:C:\Users\crade\AppData\Local\Temp\smcg.s
-24D clrtext CODE >840:C:\Users\crade\AppData\Local\Temp\smcg.s
-24E clrtext CODE >841:C:\Users\crade\AppData\Local\Temp\smcg.s
+247 clrtext CODE >832:C:\Users\crade\AppData\Local\Temp\scp0.s
+247 clrtext CODE >833:C:\Users\crade\AppData\Local\Temp\scp0.s
+248 clrtext CODE >834:C:\Users\crade\AppData\Local\Temp\scp0.s
+248 clrtext CODE >835:C:\Users\crade\AppData\Local\Temp\scp0.s
+249 clrtext CODE >836:C:\Users\crade\AppData\Local\Temp\scp0.s
+24A clrtext CODE >837:C:\Users\crade\AppData\Local\Temp\scp0.s
+24B clrtext CODE >838:C:\Users\crade\AppData\Local\Temp\scp0.s
+24C clrtext CODE >839:C:\Users\crade\AppData\Local\Temp\scp0.s
+24D clrtext CODE >840:C:\Users\crade\AppData\Local\Temp\scp0.s
+24E clrtext CODE >841:C:\Users\crade\AppData\Local\Temp\scp0.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -244,11 +244,11 @@ _rx 55 0 BANK0 1 bssBANK0 dist/default/production\Mini-Proyecto2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _RCEN 48B 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 _RSEN 489 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\smcg.o
+___sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\scp0.o
 __end_of_I2C_sleep 4BE 0 CODE 0 text8 dist/default/production\Mini-Proyecto2.X.production.o
 _main 3E 0 CODE 0 maintext dist/default/production\Mini-Proyecto2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
-start 1C 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\smcg.o
+start 1C 0 CODE 0 init C:\Users\crade\AppData\Local\Temp\scp0.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 __size_of_I2C_sleep 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
@@ -260,12 +260,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 _I2C_sleep 4AE 0 CODE 0 text8 dist/default/production\Mini-Proyecto2.X.production.o
 USART_Initialize@x 75 0 COMMON 1 cstackCOMMON dist/default/production\Mini-Proyecto2.X.production.o
 __end_of_USART_Initialize 39E 0 CODE 0 text1 dist/default/production\Mini-Proyecto2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\smcg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\crade\AppData\Local\Temp\scp0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_USART_Initialize 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 ___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Mini-Proyecto2.X.production.o
@@ -285,8 +285,8 @@ __end_of___aldiv 2B8 0 CODE 0 text2 dist/default/production\Mini-Proyecto2.X.pro
 _I2C_RX 466 0 CODE 0 text9 dist/default/production\Mini-Proyecto2.X.production.o
 _I2C_TX 414 0 CODE 0 text7 dist/default/production\Mini-Proyecto2.X.production.o
 _Temperatura 41 0 BANK0 1 bssBANK0 dist/default/production\Mini-Proyecto2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\smcg.o
-___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\smcg.o
+___stackhi 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\scp0.o
+___stacklo 0 0 ABS 0 - C:\Users\crade\AppData\Local\Temp\scp0.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 __size_of_Setup 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 __size_of_myISR 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
@@ -302,7 +302,7 @@ __size_of_I2C_TX 0 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production
 USART_Initialize@baudrate 2E 0 BANK0 1 cstackBANK0 dist/default/production\Mini-Proyecto2.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\smcg.o
+___int_sp 0 0 STACK 2 stack C:\Users\crade\AppData\Local\Temp\scp0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -346,7 +346,7 @@ __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 I2C_TX@c 74 0 COMMON 1 cstackCOMMON dist/default/production\Mini-Proyecto2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\smcg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\crade\AppData\Local\Temp\scp0.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Mini-Proyecto2.X.production.o
