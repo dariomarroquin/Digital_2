@@ -13,7 +13,7 @@
 void I2C_init(void);
 void I2C_start(void);
 void I2C_sleep(void);
-void I2C_rep_start(void);
+void I2C_rstart(void);
 void I2C_NACK(void);
 void I2C_stop(void);
 unsigned char I2C_RX(void);

@@ -1,5 +1,88 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"1416
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"290
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"543
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 542: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1133
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
 [p mainexit ]
+"13 ./usart.h
+[; ;./usart.h: 13: void USART_Initialize(const long int baudrate);
+[v _USART_Initialize `(v ~T0 @X0 0 ef1`Cl ]
+"13 ./I2C.h
+[; ;./I2C.h: 13: void I2C_init(void);
+[v _I2C_init `(v ~T0 @X0 0 ef ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
+"16 ./I2C.h
+[; ;./I2C.h: 16: void I2C_rstart(void);
+[v _I2C_rstart `(v ~T0 @X0 0 ef ]
+"20
+[; ;./I2C.h: 20: unsigned char I2C_TX(unsigned char c);
+[v _I2C_TX `(uc ~T0 @X0 0 ef1`uc ]
+"843 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"15 ./I2C.h
+[; ;./I2C.h: 15: void I2C_sleep(void);
+[v _I2C_sleep `(v ~T0 @X0 0 ef ]
+"19
+[; ;./I2C.h: 19: unsigned char I2C_RX(void);
+[v _I2C_RX `(uc ~T0 @X0 0 ef ]
+"17
+[; ;./I2C.h: 17: void I2C_NACK(void);
+[v _I2C_NACK `(v ~T0 @X0 0 ef ]
+"18
+[; ;./I2C.h: 18: void I2C_stop(void);
+[v _I2C_stop `(v ~T0 @X0 0 ef ]
+"13 MASTER.c
+[p x FOSC  =  XT         ]
+"14
+[p x WDTE  =  OFF        ]
+"15
+[p x PWRTE  =  OFF       ]
+"16
+[p x MCLRE  =  OFF       ]
+"17
+[p x CP  =  OFF          ]
+"18
+[p x CPD  =  OFF         ]
+"19
+[p x BOREN  =  OFF       ]
+"20
+[p x IESO  =  OFF        ]
+"21
+[p x FCMEN  =  OFF       ]
+"22
+[p x LVP  =  OFF         ]
+"25
+[p x BOR4V  =  BOR40V    ]
+"26
+[p x WRT  =  OFF         ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -234,17 +317,165 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
+"40 MASTER.c
+[; ;MASTER.c: 40: uint8_t c1=0;
+[v _c1 `uc ~T0 @X0 1 e ]
+[i _c1
+-> -> 0 `i `uc
+]
+"41
+[; ;MASTER.c: 41: uint8_t rx=0;
+[v _rx `uc ~T0 @X0 1 e ]
+[i _rx
+-> -> 0 `i `uc
+]
+"42
+[; ;MASTER.c: 42: char Temperatura[20];
+[v _Temperatura `uc ~T0 @X0 -> 20 `i e ]
+"52
+[; ;MASTER.c: 52: void Setup (void){
+[v _Setup `(v ~T0 @X0 1 ef ]
+{
+[e :U _Setup ]
+[f ]
+"54
+[; ;MASTER.c: 54:     ANSEL = 0b00000000;
+[e = _ANSEL -> -> 0 `i `uc ]
+"55
+[; ;MASTER.c: 55:     TRISA = 0b00000000;
+[e = _TRISA -> -> 0 `i `uc ]
+"57
+[; ;MASTER.c: 57:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"58
+[; ;MASTER.c: 58:     PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
+"62
+[; ;MASTER.c: 62: }
+[e :UE 139 ]
+}
+[v $root$_myISR `(v ~T0 @X0 0 e ]
+"66
+[; ;MASTER.c: 66: void __attribute__((picinterrupt(("")))) myISR(void){
+[v _myISR `(v ~T1 @X0 1 ef ]
+{
+[e :U _myISR ]
+[f ]
+"67
+[; ;MASTER.c: 67:     if(PIR1bits.TXIF == 1){
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 141  ]
+{
+"68
+[; ;MASTER.c: 68:        TXREG = Temperatura[c1];
+[e = _TXREG -> *U + &U _Temperatura * -> _c1 `ux -> -> # *U &U _Temperatura `ui `ux `uc ]
+"69
+[; ;MASTER.c: 69:        if (c1 == 20){
+[e $ ! == -> _c1 `i -> 20 `i 142  ]
+{
+"70
+[; ;MASTER.c: 70:            c1=0;
+[e = _c1 -> -> 0 `i `uc ]
+"71
+[; ;MASTER.c: 71:        }
+}
+[e $U 143  ]
+"72
+[; ;MASTER.c: 72:         else {
+[e :U 142 ]
+{
+"73
+[; ;MASTER.c: 73:             c1++;
+[e ++ _c1 -> -> 1 `i `uc ]
+"74
+[; ;MASTER.c: 74:         }
+}
+[e :U 143 ]
+"75
+[; ;MASTER.c: 75:     }
+}
+[e :U 141 ]
+"76
+[; ;MASTER.c: 76: }
+[e :UE 140 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"11 MASTER.c
-[; ;MASTER.c: 11: void main(void) {
+"81
+[; ;MASTER.c: 81: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"12
-[; ;MASTER.c: 12:     return;
-[e $UE 138  ]
-"13
-[; ;MASTER.c: 13: }
-[e :UE 138 ]
+"82
+[; ;MASTER.c: 82:     Setup();
+[e ( _Setup ..  ]
+"83
+[; ;MASTER.c: 83:     USART_Initialize(9600);
+[e ( _USART_Initialize (1 -> -> 9600 `i `l ]
+"84
+[; ;MASTER.c: 84:     I2C_init();
+[e ( _I2C_init ..  ]
+"86
+[; ;MASTER.c: 86:     _delay((unsigned long)((600)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 600 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"87
+[; ;MASTER.c: 87:     while (1){
+[e :U 146 ]
+{
+"89
+[; ;MASTER.c: 89:         I2C_rstart();
+[e ( _I2C_rstart ..  ]
+"90
+[; ;MASTER.c: 90:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"92
+[; ;MASTER.c: 92:         I2C_TX(0x90);
+[e ( _I2C_TX (1 -> -> 144 `i `uc ]
+"93
+[; ;MASTER.c: 93:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"95
+[; ;MASTER.c: 95:         I2C_rstart();
+[e ( _I2C_rstart ..  ]
+"96
+[; ;MASTER.c: 96:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"98
+[; ;MASTER.c: 98:         SSPBUF = 0x91;
+[e = _SSPBUF -> -> 145 `i `uc ]
+"99
+[; ;MASTER.c: 99:         I2C_sleep();
+[e ( _I2C_sleep ..  ]
+"100
+[; ;MASTER.c: 100:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"102
+[; ;MASTER.c: 102:         rx = I2C_RX();
+[e = _rx ( _I2C_RX ..  ]
+"103
+[; ;MASTER.c: 103:         I2C_sleep();
+[e ( _I2C_sleep ..  ]
+"105
+[; ;MASTER.c: 105:         I2C_NACK();
+[e ( _I2C_NACK ..  ]
+"106
+[; ;MASTER.c: 106:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"108
+[; ;MASTER.c: 108:         I2C_stop();
+[e ( _I2C_stop ..  ]
+"109
+[; ;MASTER.c: 109:         _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"112
+[; ;MASTER.c: 112:     }
+}
+[e :U 145 ]
+[e $U 146  ]
+[e :U 147 ]
+"113
+[; ;MASTER.c: 113:     return;
+[e $UE 144  ]
+"114
+[; ;MASTER.c: 114: }
+[e :UE 144 ]
 }
