@@ -54,9 +54,9 @@ void Setup (void){
     
     ANSEL = 0b00000000;
     ANSELH = 0b00000000;
-    TRISE= 0b00000000;
+    TRISA= 0b00000000;
     
-    PORTE = 0;
+    PORTA = 0;
     PORTC = 0;
     
     
@@ -72,13 +72,13 @@ void __interrupt() myISR(void){
     }
     
     if (leds == 1) {      
-        PORTE = 0b00000000;          
+        PORTA = 0b00000000;          
     } else if (leds == 2) {
-        PORTE = 0b00000001;  
+        PORTA = 0b00000001;  
     } else if (leds == 3) {
-        PORTE = 0b00000010;  
+        PORTA = 0b00000010;  
     } else if (leds == 4) {
-        PORTE = 0b00000011;  
+        PORTA = 0b00000011;  
     }
     return;
    if(PIR1bits.TXIF == 1){
