@@ -66,10 +66,10 @@ void Setup (void){
 //Interrupcion
 //-----------------------------------------------------------------------------
 void __interrupt() myISR(void){
-    //if(PIR1bits.RCIF == 1){
-   //     PIR1bits.RCIF = 0;
+    if(PIR1bits.RCIF == 1){
+        PIR1bits.RCIF = 0;
         leds = RCREG;
-    //}
+    }
     
     if (leds == 1) {      
         PORTE = 0b00000000;          
