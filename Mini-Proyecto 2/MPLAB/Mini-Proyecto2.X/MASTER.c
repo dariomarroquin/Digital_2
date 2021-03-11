@@ -39,7 +39,8 @@
 
 uint8_t c1=0;
 uint8_t rx=0;
-char Temperatura[20];
+char Temperatura[];
+char leds = 0;
 
 //-----------------------------------------------------------------------------
 //Funciones
@@ -64,9 +65,24 @@ void Setup (void){
 //Interrupcion
 //-----------------------------------------------------------------------------
 void __interrupt() myISR(void){
-    if(PIR1bits.TXIF == 1){
+    if(PIR1bits.RCIF == 1){
+        PIR1bits.RCIF = 0;
+        leds = RCREG;
+    }
+    
+    if (leds == 1) {      
+        PORTAbits.RA0 = 0;          
+    } else if (leds == 2) {
+        PORTAbits.RA0 = 1;  
+    } else if (leds == 3) {
+        PORTAbits.RA1 = 0; 
+    } else if (leds == 4) {
+        PORTAbits.RA1 = 1; 
+    }
+    return;
+   if(PIR1bits.TXIF == 1){
        TXREG = Temperatura[c1];
-       if (c1 == 20){
+       if (c1 == 5){
            c1=0;       
        }
         else {
@@ -75,6 +91,9 @@ void __interrupt() myISR(void){
     }
 }
 
+void conversion (void){
+    sprintf(Temperatura, " %2i ", rx);
+}
 //-----------------------------------------------------------------------------
 //---------------------------MAIN----------------------------------------------
 //-----------------------------------------------------------------------------
@@ -82,32 +101,38 @@ void main(void) {
     Setup();
     USART_Initialize(9600);
     I2C_init();
-    
     __delay_ms(600);
     while (1){
         
         I2C_rstart();
         __delay_ms(10);
         
+        
+        
         I2C_TX(0x90);
         __delay_ms(10);
         
+        
         I2C_rstart();
         __delay_ms(10);
+        
         
         SSPBUF = 0x91;
         I2C_sleep();
         __delay_ms(10);
         
+        
         rx = I2C_RX();
         I2C_sleep();
-
+        
+        
         I2C_NACK();
         __delay_ms(10);
         
+        
         I2C_stop();
         __delay_ms(10);
-        
+        conversion();
         
     }
     return;

@@ -2774,7 +2774,7 @@ void USART_Initialize(const long int baudrate);
 
 uint8_t c1=0;
 uint8_t rx=0;
-char Temperatura[];
+char Temperatura = 0;
 char leds = 0;
 # 53 "MASTER.c"
 void Setup (void){
@@ -2797,30 +2797,19 @@ void __attribute__((picinterrupt(("")))) myISR(void){
         leds = RCREG;
     }
 
-    if (leds == 1) {
-        PORTAbits.RA0 = 0;
-    } else if (leds == 2) {
-        PORTAbits.RA0 = 1;
-    } else if (leds == 3) {
-        PORTAbits.RA1 = 0;
-    } else if (leds == 4) {
-        PORTAbits.RA1 = 1;
+    if (leds == 0X10) {
+        PORTA = 0;
+    } else if (leds == 0X20) {
+        PORTA = 1;
+    } else if (leds == 0X30) {
+        PORTA = 0;
+    } else if (leds == 0X40) {
+        PORTA = 2;
     }
     return;
-   if(PIR1bits.TXIF == 1){
-       TXREG = Temperatura[c1];
-       if (c1 == 5){
-           c1=0;
-       }
-        else {
-            c1++;
-        }
-    }
+# 92 "MASTER.c"
 }
 
-void conversion (void){
-    sprintf(Temperatura, " %2i ", rx);
-}
 
 
 
@@ -2828,38 +2817,32 @@ void main(void) {
     Setup();
     USART_Initialize(9600);
     I2C_init();
+
     _delay((unsigned long)((600)*(8000000/4000.0)));
     while (1){
-
+        TXREG = Temperatura;
         I2C_rstart();
         _delay((unsigned long)((10)*(8000000/4000.0)));
-
-
 
         I2C_TX(0x90);
         _delay((unsigned long)((10)*(8000000/4000.0)));
 
-
         I2C_rstart();
         _delay((unsigned long)((10)*(8000000/4000.0)));
-
 
         SSPBUF = 0x91;
         I2C_sleep();
         _delay((unsigned long)((10)*(8000000/4000.0)));
 
-
         rx = I2C_RX();
         I2C_sleep();
-
 
         I2C_NACK();
         _delay((unsigned long)((10)*(8000000/4000.0)));
 
-
         I2C_stop();
         _delay((unsigned long)((10)*(8000000/4000.0)));
-        conversion();
+
 
     }
     return;

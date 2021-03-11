@@ -196,6 +196,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1fff"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/crade/Dropbox/Ingenieria Mecatronica/Cuarto Año     - 2021/Primer Semestre/Digital 2/Labs/Github/Digital_2/Mini-Proyecto 2/MPLAB/Mini-Proyecto2.X/debug/default/Mini-Proyecto2_ptg"/>
         <property key="programmerToGoImageName" value="Mini-Proyecto2_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

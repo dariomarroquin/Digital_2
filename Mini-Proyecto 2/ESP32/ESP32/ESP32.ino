@@ -1,4 +1,5 @@
 
+
 // Adafruit IO Publish Example
 //
 // Adafruit invests time and resources providing this open source code.
@@ -27,8 +28,9 @@ int entrada = 0;
 
 // set up the 'counter' feed
 AdafruitIO_Feed *mini2 = io.feed("mini2");
-AdafruitIO_Feed *Rojo = io.feed("Rojo");
-AdafruitIO_Feed *Verde = io.feed("Verde");
+AdafruitIO_Feed *rojo = io.feed("rojo");
+AdafruitIO_Feed *verde = io.feed("verde");
+
 
 void handleMessage(AdafruitIO_Data *data){
   leds = data ->value();
@@ -38,7 +40,7 @@ void setup() {
   
   // start the serial connection
   Serial.begin(9600);
-  pinMode(3, OUTPUT);
+  pinMode(2, OUTPUT);
 
   // wait for serial monitor to open
   while(! Serial);
@@ -47,19 +49,19 @@ void setup() {
 
   // connect to io.adafruit.com
   io.connect();
-  Rojo -> onMessage(handleMessage);
-  Verde -> onMessage(handleMessage);
+  rojo -> onMessage(handleMessage);
+  verde -> onMessage(handleMessage);
   
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
-    Serial.print(".");
-    digitalWrite(3, HIGH);
+    Serial.print("Esperando");
+    digitalWrite(2, HIGH);
     delay(500);
   }
-  digitalWrite(3, LOW);
+  digitalWrite(2, LOW);
 
-  Rojo -> get();
-  Verde -> get();
+  rojo -> get();
+  verde -> get();
 
   
   // we are connected
@@ -83,20 +85,24 @@ void loop() {
   }
 
   switch (leds.toInt()){
-    case 00:
-    Serial.write (0x10);
+    case 1:
+    Serial.write (1);
+    Serial.print(1);
     break;
 
-    case 01:
-    Serial.write (0x20);
+    case 2:
+    Serial.write (2);
+    Serial.print(2);
     break;
 
-    case 10:
-    Serial.write (0x30);
+    case 3:
+    Serial.write (3);
+    Serial.print(3);
     break;
 
-    case 11:
-    Serial.write (0x40);
+    case 4:
+    Serial.write (4);
+    Serial.print(4);
     break;
 
     default:
@@ -107,6 +113,6 @@ void loop() {
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
   // (1000 milliseconds == 1 second) during each loop.
-  delay(3000);
+  delay(1000);
 
 }
